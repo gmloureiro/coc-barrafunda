@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- ESTILOS (mesma base do site principal) -->
+  <!-- ESTILOS -->
   <style>
     :root {
       --green: #009739;
@@ -190,7 +190,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
       gap: 30px;
       align-items: flex-start;
     }
@@ -233,6 +233,20 @@
       margin-bottom: 14px;
     }
 
+    .hero-mini-gallery {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hero-mini-gallery img {
+      border-radius: 12px;
+      height: 74px;
+      width: 33%;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+
     .hero-cta {
       display: flex;
       flex-wrap: wrap;
@@ -250,7 +264,7 @@
     .hero-form-card {
       background: #ffffff;
       border-radius: var(--radius-lg);
-      padding: 18px 16px;
+      padding: 18px 16px 10px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(0, 151, 57, 0.25);
       position: relative;
@@ -266,6 +280,20 @@
       border: 16px solid rgba(0, 151, 57, 0.08);
       right: -50px;
       top: -70px;
+    }
+
+    .hero-form-image {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hero-form-image img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
     }
 
     .hero-form-header {
@@ -397,6 +425,13 @@
     }
 
     /* TABELA COMPARAÇÃO */
+    .compare-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 20px;
+      align-items: center;
+    }
+
     .compare-table {
       width: 100%;
       border-collapse: collapse;
@@ -427,6 +462,49 @@
 
     .compare-table td ul li::before {
       content: "• ";
+      color: var(--green-dark);
+    }
+
+    .compare-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(15,23,42,0.16);
+    }
+
+    .compare-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* SEGMENTOS / ENSINO */
+    .segmento-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid rgba(0, 151, 57, 0.15);
+    }
+
+    .segmento-card img {
+      border-radius: 10px;
+      margin-bottom: 8px;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .segmento-card ul {
+      list-style: none;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .segmento-card ul li {
+      margin-bottom: 4px;
+    }
+
+    .segmento-card ul li::before {
+      content: "✓ ";
       color: var(--green-dark);
     }
 
@@ -472,12 +550,27 @@
       padding-left: 14px;
       font-size: 12px;
       color: var(--text-muted);
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 8px;
     }
 
     .cta-right-box ul {
-      margin-top: 6px;
+      margin-top: 0;
       padding-left: 16px;
       font-size: 12px;
+    }
+
+    .cta-image {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.18);
+    }
+
+    .cta-image img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
     }
 
     /* CONTATO */
@@ -645,6 +738,7 @@
     /* RESPONSIVO */
     @media (max-width: 960px) {
       .hero-grid,
+      .compare-wrap,
       .cta,
       .contato-grid {
         grid-template-columns: 1fr;
@@ -689,7 +783,7 @@
     }
   </style>
 
-  <!-- SCHEMA.ORG (SEO LOCAL – continua focado em COC) -->
+  <!-- SCHEMA.ORG (SEO LOCAL – referência continua COC) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -726,6 +820,7 @@
         <div class="nav-links">
           <a href="#comparacao">Comparação</a>
           <a href="#motivos">Por que COC?</a>
+          <a href="#ensino">Ensino</a>
           <a href="#estrutura">Estrutura</a>
           <a href="#contato">Contato</a>
         </div>
@@ -744,7 +839,7 @@
         <div>
           <div class="hero-tag">
             <span>Procurando Pueri Domus?</span>
-            <span>Conheça o COC Barra Funda</span>
+            <span>Compare com o COC Barra Funda</span>
           </div>
           <h1 class="hero-title">
             Está pesquisando <span>Pueri Domus</span> na Zona Oeste?
@@ -761,6 +856,13 @@
             e compare com calma antes de fechar matrícula em qualquer escola da região.
           </div>
 
+          <!-- mini galeria hero -->
+          <div class="hero-mini-gallery">
+            <img src="aluno-educacao-infantil-coc-barra-funda.png" alt="Aluno do COC Barra Funda">
+            <img src="aluna-fundamental-coc-barra-funda.jpg" alt="Aluna do COC Barra Funda">
+            <img src="aluno-arte-coc-barra-funda.jpg" alt="Atividade de arte no COC Barra Funda">
+          </div>
+
           <div class="hero-cta">
             <a href="#form-interesse" class="btn btn-primary">Quero comparar com o COC</a>
             <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-outline">Falar no WhatsApp</a>
@@ -772,6 +874,9 @@
 
         <!-- FORM -->
         <aside class="hero-form-card" id="form-interesse" aria-label="Formulário de interesse COC Barra Funda">
+          <div class="hero-form-image">
+            <img src="card-educacao-infantil-coc-barra-funda.jpg" alt="Educação no COC Barra Funda">
+          </div>
           <div class="hero-form-header">
             <h2>Quero receber a proposta do COC Barra Funda</h2>
             <p>Compare com Pueri Domus e outras escolas da região com informações claras de mensalidade, estrutura e integral.</p>
@@ -840,72 +945,79 @@
         </div>
 
         <div class="card">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th>O que famílias costumam buscar em escolas como o Pueri Domus</th>
-                <th>Como o COC Barra Funda se posiciona</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Ensino forte, com foco em resultado acadêmico.</li>
-                    <li>Tradição e proposta pedagógica consolidada.</li>
-                    <li>Uso de tecnologia em sala de aula.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Material COC reconhecido nacionalmente e foco em desempenho.</li>
-                    <li>Equipe experiente, com acompanhamento próximo das famílias.</li>
-                    <li>Sala Google e recursos digitais integrados à rotina pedagógica.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Estrutura física confortável e segura.</li>
-                    <li>Ambiente acolhedor para o aluno.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Prédio moderno na Várzea da Barra Funda, com salas amplas e monitoramento.</li>
-                    <li>Ambiente familiar, turmas com acompanhamento próximo e comunicação constante com os pais.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Período integral com atividades adicionais.</li>
-                    <li>Localização estratégica na zona oeste.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Opções de período integral com estudo assistido, projetos e atividades.</li>
-                    <li>Endereço na Rua Inhaúma, fácil acesso por Barra Funda, Perdizes, Pompeia, Lapa e região.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Bom custo-benefício para o investimento da família.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Estrutura completa, sala Google e integral com valores competitivos na região – ideal para quem quer comparar antes de fechar.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="compare-wrap">
+            <div>
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>O que famílias costumam buscar em escolas como o Pueri Domus</th>
+                    <th>Como o COC Barra Funda se posiciona</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>Ensino forte, com foco em resultado acadêmico.</li>
+                        <li>Tradição e proposta pedagógica consolidada.</li>
+                        <li>Uso de tecnologia em sala de aula.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Material COC reconhecido nacionalmente e foco em desempenho.</li>
+                        <li>Equipe experiente, com acompanhamento próximo das famílias.</li>
+                        <li>Sala Google e recursos digitais integrados à rotina pedagógica.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>Estrutura física confortável e segura.</li>
+                        <li>Ambiente acolhedor para o aluno.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Prédio moderno na Várzea da Barra Funda, com salas amplas e monitoramento.</li>
+                        <li>Ambiente familiar, turmas com acompanhamento próximo e comunicação constante com os pais.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>Período integral com atividades adicionais.</li>
+                        <li>Localização estratégica na zona oeste.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Opções de período integral com estudo assistido, projetos e atividades.</li>
+                        <li>Endereço na Rua Inhaúma, fácil acesso por Barra Funda, Perdizes, Pompeia, Lapa e região.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>Bom custo-benefício para o investimento da família.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Estrutura completa, sala Google e integral com valores competitivos na região – ideal para quem quer comparar antes de fechar.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="compare-image" aria-label="Alunos no COC Barra Funda">
+              <img src="banner-ensino-medio-coc-barra-funda.jpg" alt="Aluna do Ensino Médio COC Barra Funda">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -962,7 +1074,56 @@
       </div>
     </section>
 
-    <!-- CTA MID-PAGE -->
+    <!-- ENSINO / SEGMENTOS COM IMAGENS -->
+    <section id="ensino">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Ensino</div>
+          <h2 class="section-title">Do Fundamental I ao Ensino Médio, em uma jornada contínua</h2>
+          <p class="section-subtitle">
+            Assim como famílias que buscam Pueri Domus, quem escolhe o COC Barra Funda quer uma formação completa,
+            com objetivos claros em cada fase da vida escolar.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="segmento-card">
+            <img src="card-educacao-infantil-coc-barra-funda.jpg"
+                 alt="Fundamental I no COC Barra Funda">
+            <h3>Ensino Fundamental I</h3>
+            <ul>
+              <li>Da 1ª à 5ª série.</li>
+              <li>Base sólida em leitura, escrita e matemática.</li>
+              <li>Projetos lúdicos e introdução à tecnologia.</li>
+            </ul>
+          </article>
+
+          <article class="segmento-card">
+            <img src="card-fundamental2-coc-barra-funda.jpg"
+                 alt="Fundamental II no COC Barra Funda">
+            <h3>Ensino Fundamental II</h3>
+            <ul>
+              <li>Da 6ª à 9ª série.</li>
+              <li>Fortalecimento de conteúdo e pensamento crítico.</li>
+              <li>Uso intenso da sala Google e projetos de pesquisa.</li>
+            </ul>
+          </article>
+
+          <article class="segmento-card">
+            <img src="banner-ensino-medio-coc-barra-funda.jpg"
+                 alt="Ensino Médio no COC Barra Funda">
+            <h3>Ensino Médio</h3>
+            <ul>
+              <li>Preparação para ENEM e vestibulares.</li>
+              <li>Simulados frequentes e orientação de carreira.</li>
+              <li>Ambiente focado em resultado e disciplina.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA COM IMAGEM -->
     <section id="cta-comparar">
       <div class="container">
         <div class="cta">
@@ -981,13 +1142,18 @@
             </div>
           </div>
           <div class="cta-right-box">
-            <strong>Na conversa, você pode:</strong>
-            <ul>
-              <li>Entender o projeto pedagógico do COC Barra Funda.</li>
-              <li>Ver como funciona a sala Google e o período integral.</li>
-              <li>Comparar valores com outras escolas da região.</li>
-              <li>Agendar uma visita presencial.</li>
-            </ul>
+            <div class="cta-image">
+              <img src="aluna-fundamental-coc-barra-funda.jpg" alt="Aluna estudando no COC Barra Funda">
+            </div>
+            <div>
+              <strong>Na conversa, você pode:</strong>
+              <ul>
+                <li>Entender o projeto pedagógico do COC Barra Funda.</li>
+                <li>Ver como funciona a sala Google e o período integral.</li>
+                <li>Comparar valores com outras escolas da região.</li>
+                <li>Agendar uma visita presencial.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -1016,6 +1182,7 @@
               <li>✓ Projetos de pesquisa e trabalhos em grupo.</li>
               <li>✓ Aproximação entre tecnologia e conteúdo acadêmico.</li>
             </ul>
+            <img src="sala-google-coc-barra-funda.jpg" alt="Sala Google do COC Barra Funda" style="border-radius:12px; margin-top:10px;">
           </article>
 
           <article class="card">
@@ -1079,6 +1246,7 @@
         <div class="footer-links">
           <a href="#comparacao">Comparação</a>
           <a href="#motivos">Por que COC?</a>
+          <a href="#ensino">Ensino</a>
           <a href="#estrutura">Estrutura</a>
           <a href="#contato">Contato</a>
         </div>
@@ -1153,3 +1321,4 @@
   </script>
 </body>
 </html>
+
