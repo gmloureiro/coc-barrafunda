@@ -289,11 +289,11 @@
       color: var(--text-muted);
     }
 
-    /* HERO FORM CARD */
+    /* HERO FORM CARD + IMAGEM */
     .hero-form-card {
       background: #ffffff;
       border-radius: var(--radius-lg);
-      padding: 18px 16px;
+      padding: 16px 16px 18px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(0, 151, 57, 0.25);
       position: relative;
@@ -309,6 +309,20 @@
       border: 16px solid rgba(0, 151, 57, 0.08);
       right: -50px;
       top: -70px;
+    }
+
+    .hero-form-image {
+      position: relative;
+      z-index: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .hero-form-image img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
     }
 
     .hero-form-header {
@@ -557,7 +571,7 @@
       text-align: center;
     }
 
-    /* DEPOIMENTOS */
+    /* DEPOIMENTOS – TEXTO + VÍDEO */
     .depo-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -573,8 +587,25 @@
       color: var(--text-muted);
     }
 
+    .depo-video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .depo-video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     .depo-nome {
-      margin-top: 8px;
+      margin-top: 4px;
       font-weight: 600;
       color: var(--text-main);
       font-size: 13px;
@@ -881,11 +912,6 @@
     },
     "telephone": "+55-11-0000-0000",
     "url": "https://cocbarrafunda.com.br/",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-23.000000",
-      "longitude": "-46.000000"
-    },
     "areaServed": "Zona Oeste de São Paulo"
   }
   </script>
@@ -897,7 +923,9 @@
     <div class="container">
       <nav class="nav">
         <div class="nav-left">
-          <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
+          <a href="#inicio">
+            <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
+          </a>
           <div class="brand-text">
             <strong>COC Barra Funda</strong>
             <span>Da 1ª série ao Ensino Médio</span>
@@ -908,6 +936,8 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
         </div>
         <div class="nav-cta">
@@ -965,8 +995,12 @@
           </div>
         </div>
 
-        <!-- FORM FORMSpree -->
+        <!-- FORM FORMSpree + IMAGEM -->
         <aside class="hero-form-card" aria-label="Formulário de interesse" id="form-interesse">
+          <div class="hero-form-image">
+            <!-- Imagem logo acima do formulário -->
+            <img src="banner-home.jpg" alt="COC Barra Funda - fachada e alunos">
+          </div>
           <div class="hero-form-header">
             <h2>Quero saber mais sobre o COC Barra Funda</h2>
             <p>Preencha seus dados para receber contato da escola sobre matrícula, valores e período integral.</p>
@@ -1217,29 +1251,52 @@
       </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
+    <!-- DEPOIMENTOS COM VÍDEOS -->
     <section id="depoimentos">
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Famílias COC</div>
           <h2 class="section-title">O que os pais dizem</h2>
           <p class="section-subtitle">
-            Depoimentos de famílias que escolheram o COC Barra Funda.
+            Depoimentos em vídeo de famílias que escolheram o COC Barra Funda.
           </p>
         </div>
 
         <div class="depo-grid">
           <article class="depo-card">
+            <div class="depo-video-wrapper">
+              <!-- Trocar VIDEOID1 pelo ID real do YouTube -->
+              <iframe src="https://www.youtube.com/embed/VIDEOID1"
+                      title="Depoimento 1 - COC Barra Funda"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+            </div>
             “Pesquisamos várias escolas da zona oeste e o COC Barra Funda foi o que melhor uniu preço, estrutura e acolhimento.”
             <div class="depo-nome">Mãe de aluno do Fundamental II</div>
             <div class="depo-info">Várzea da Barra Funda</div>
           </article>
+
           <article class="depo-card">
+            <div class="depo-video-wrapper">
+              <!-- Trocar VIDEOID2 pelo ID real do YouTube -->
+              <iframe src="https://www.youtube.com/embed/VIDEOID2"
+                      title="Depoimento 2 - COC Barra Funda"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+            </div>
             “A sala Google e o uso de tecnologia deram um salto no interesse do meu filho pelas aulas.”
             <div class="depo-nome">Pai de aluno do Ensino Médio</div>
             <div class="depo-info">Zona Oeste de São Paulo</div>
           </article>
+
           <article class="depo-card">
+            <div class="depo-video-wrapper">
+              <!-- Trocar VIDEOID3 pelo ID real do YouTube -->
+              <iframe src="https://www.youtube.com/embed/VIDEOID3"
+                      title="Depoimento 3 - COC Barra Funda"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+            </div>
             “O período integral nos trouxe tranquilidade. Ele estuda, se alimenta e participa de projetos no mesmo lugar.”
             <div class="depo-nome">Responsável de aluno do Fundamental I</div>
             <div class="depo-info">Família COC Barra Funda</div>
@@ -1308,7 +1365,6 @@
             </p>
           </div>
           <div class="mapa-embed" aria-label="Mapa de localização do COC Barra Funda">
-            <!-- Mapa interativo Google Maps -->
             <iframe
               src="https://www.google.com/maps?q=Rua+Inha%C3%BAma,+129+-+V%C3%A1rzea+da+Barra+Funda,+S%C3%A3o+Paulo+-+SP&output=embed"
               loading="lazy"
@@ -1336,6 +1392,7 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
         </div>
       </div>
