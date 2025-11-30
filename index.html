@@ -19,8 +19,8 @@
   <meta property="og:url" content="https://cocbarrafunda.com.br/" />
   <meta property="og:image" content="https://cocbarrafunda.com.br/fachada-coc-barra-funda.jpg" />
 
-  <!-- FAVICON (usa o próprio logo) -->
-  <link rel="icon" type="image/png" href="logo-coc-barra-funda.png" />
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="logo-coc-barra-funda-round.png" />
 
   <!-- FONTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,6 +96,7 @@
     .logo-img {
       height: 44px;
       width: auto;
+      border-radius: 50%;
     }
 
     .brand-text {
@@ -491,13 +492,21 @@
     }
 
     .estrutura-badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-size: 11px;
       padding: 3px 9px;
       border-radius: 999px;
       background: rgba(0, 151, 57, 0.08);
       color: var(--green-dark);
       margin-bottom: 4px;
+    }
+
+    .estrutura-badge img {
+      height: 16px;
+      width: auto;
+      display: block;
     }
 
     .estrutura-photo {
@@ -530,8 +539,8 @@
       border-radius: 10px;
       margin-bottom: 6px;
       width: 100%;
-      height: 190px;      /* padroniza altura */
-      object-fit: cover;  /* recorte proporcional bonito */
+      height: 190px;
+      object-fit: cover;
       background: #00973910;
     }
 
@@ -702,6 +711,7 @@
     .footer-partner-logo {
       height: 22px;
       width: auto;
+      border-radius: 999px;
     }
 
     /* COOKIE BANNER */
@@ -757,16 +767,17 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
-      background: #25d366;
+      background: transparent; /* usa só o ícone */
     }
 
     .whatsapp-float img {
-      width: 38px;
-      height: 38px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
     }
 
-    .whatsapp-float:hover {
+    .whatsapp-float img:hover {
       transform: translateY(-1px);
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
     }
@@ -867,7 +878,7 @@
     <div class="container">
       <nav class="nav">
         <div class="nav-left">
-          <img src="logo-coc-barra-funda.png" alt="COC Barra Funda" class="logo-img" />
+          <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
           <div class="brand-text">
             <strong>COC Barra Funda</strong>
             <span>Da 1ª série ao Ensino Médio</span>
@@ -878,7 +889,6 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
-          <a href="#galeria">Imagens</a>
           <a href="#contato">Contato</a>
         </div>
         <div class="nav-cta">
@@ -1127,7 +1137,7 @@
         <div class="estrutura-grid">
           <div>
             <span class="estrutura-badge">
-              <img src="logo-google.png" alt="Google" style="height:18px; vertical-align:middle; margin-right:6px;">
+              <img src="logo-google-small.png" alt="Google">
               Sala Google • Tecnologia
             </span>
             <h3>Sala Google: aprendizado conectado</h3>
@@ -1149,14 +1159,14 @@
       </div>
     </section>
 
-    <!-- GALERIA (ALUNOS + MATERIAIS) -->
+    <!-- GALERIA (APENAS 3 IMAGENS DAS CRIANÇAS) -->
     <section id="galeria">
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Nossa escola</div>
-          <h2 class="section-title">COC Barra Funda em imagens</h2>
+          <h2 class="section-title">O futuro deles começa aqui</h2>
           <p class="section-subtitle">
-            Veja um pouco do dia a dia dos alunos e da proposta visual da escola.
+            Um pouco do dia a dia dos alunos e dos espaços pensados para estimular aprendizado, criatividade e amizade.
           </p>
         </div>
 
@@ -1175,11 +1185,6 @@
             <img src="aluno-arte-coc-barra-funda.jpg"
                  alt="Aluno em atividade de arte no COC Barra Funda" />
             <span>Atividades de arte e criatividade</span>
-          </div>
-          <div class="galeria-card">
-            <img src="materiais-escolares-coc-barra-funda.jpg"
-                 alt="Materiais escolares e tecnologia no COC Barra Funda" />
-            <span>Tecnologia e materiais que apoiam o aprendizado</span>
           </div>
         </div>
       </div>
@@ -1293,7 +1298,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-logo">
-          <img src="logo-coc-barra-funda.png" alt="COC Barra Funda" class="logo-img" />
+          <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
           <div>
             <div style="font-weight:600;">COC Barra Funda</div>
             <div style="font-size:11px;">Melhor escola da zona oeste de São Paulo</div>
@@ -1303,15 +1308,15 @@
           <a href="#sobre">Sobre</a>
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
-          <a href="#galeria">Imagens</a>
+          <a href="#estrutura">Estrutura</a>
           <a href="#contato">Contato</a>
         </div>
       </div>
 
       <div class="footer-partners">
         <span>Parceiros em tecnologia educacional:</span>
-        <img src="logo-coc-barra-funda.png" alt="COC Barra Funda" class="footer-partner-logo">
-        <img src="logo-google.png" alt="Google" class="footer-partner-logo">
+        <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="footer-partner-logo">
+        <img src="logo-google-small.png" alt="Google" class="footer-partner-logo">
       </div>
 
       <div class="footer-bottom">
