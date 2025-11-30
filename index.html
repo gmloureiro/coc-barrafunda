@@ -508,7 +508,7 @@
 
     .estrutura-photo-inner {
       border-radius: 12px;
-      background: url("imagens/sala-google-coc-barra-funda.jpg") center/cover no-repeat;
+      background: url("imagens/materiais-escolares-coc-barra-funda.jpg") center/cover no-repeat;
       min-height: 220px;
     }
 
@@ -683,6 +683,21 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+    }
+
+    .footer-partners {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-partner-logo {
+      height: 22px;
+      width: auto;
     }
 
     /* COOKIE BANNER */
@@ -1055,6 +1070,9 @@
           </article>
           <article class="segmento-card">
             <h3>Ensino Médio</h3>
+            <img src="imagens/banner-ensino-medio-coc-barra-funda.jpg"
+                 alt="Banner Ensino Médio COC Barra Funda"
+                 style="border-radius:10px; margin:6px 0 8px; max-width:100%;">
             <ul>
               <li>Preparação para ENEM e vestibulares.</li>
               <li>Simulados frequentes e orientação de carreira.</li>
@@ -1078,7 +1096,10 @@
 
         <div class="estrutura-grid">
           <div>
-            <span class="estrutura-badge">Sala Google • Tecnologia</span>
+            <span class="estrutura-badge">
+              <img src="imagens/logo-google.png" alt="Google" style="height:18px; vertical-align:middle; margin-right:6px;">
+              Sala Google • Tecnologia
+            </span>
             <h3>Sala Google: aprendizado conectado</h3>
             <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">
               A sala Google do COC Barra Funda traz aulas mais dinâmicas, colaborativas e próximas do cotidiano digital dos alunos.
@@ -1092,36 +1113,43 @@
             </ul>
           </div>
           <div class="estrutura-photo" aria-label="Sala Google do COC Barra Funda">
-            <!-- IMAGEM DE ALUNOS NA SALA GOOGLE -->
             <div class="estrutura-photo-inner"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALERIA (ALUNOS + FACHADA) -->
+    <!-- GALERIA (ALUNOS + MATERIAIS) -->
     <section id="galeria">
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Nossa escola</div>
           <h2 class="section-title">COC Barra Funda em imagens</h2>
           <p class="section-subtitle">
-            Veja um pouco da fachada da escola e do dia a dia dos alunos.
+            Veja um pouco do dia a dia dos alunos e da proposta visual da escola.
           </p>
         </div>
 
         <div class="galeria-grid">
           <div class="galeria-card">
-            <img src="imagens/fachada-coc-barra-funda.jpg" alt="Fachada do COC Barra Funda na Rua Inhaúma" />
-            <span>Fachada do COC Barra Funda – Rua Inhaúma, 129–133</span>
+            <img src="imagens/aluno-educacao-infantil-coc-barra-funda.png"
+                 alt="Aluno das séries iniciais no COC Barra Funda" />
+            <span>Alunos das séries iniciais no COC Barra Funda</span>
           </div>
           <div class="galeria-card">
-            <img src="imagens/alunos-sala-google-coc-barra-funda.jpg" alt="Alunos na sala Google do COC Barra Funda" />
-            <span>Alunos em atividade na sala Google</span>
+            <img src="imagens/aluna-fundamental-coc-barra-funda.jpg"
+                 alt="Aluna do ensino fundamental no COC Barra Funda" />
+            <span>Aluna do Ensino Fundamental em atividade</span>
           </div>
           <div class="galeria-card">
-            <img src="imagens/alunos-patio-coc-barra-funda.jpg" alt="Alunos no pátio e área externa do COC Barra Funda" />
-            <span>Convivência e recreação no pátio da escola</span>
+            <img src="imagens/aluno-arte-coc-barra-funda.jpg"
+                 alt="Aluno em atividade de arte no COC Barra Funda" />
+            <span>Atividades de arte e criatividade</span>
+          </div>
+          <div class="galeria-card">
+            <img src="imagens/materiais-escolares-coc-barra-funda.jpg"
+                 alt="Materiais escolares e tecnologia no COC Barra Funda" />
+            <span>Tecnologia e materiais que apoiam o aprendizado</span>
           </div>
         </div>
       </div>
@@ -1249,6 +1277,13 @@
           <a href="#contato">Contato</a>
         </div>
       </div>
+
+      <div class="footer-partners">
+        <span>Parceiros em tecnologia educacional:</span>
+        <img src="imagens/logo-coc-barra-funda.png" alt="COC Barra Funda" class="footer-partner-logo">
+        <img src="imagens/logo-google.png" alt="Google" class="footer-partner-logo">
+      </div>
+
       <div class="footer-bottom">
         <div>© <span id="anoAtual"></span> COC Barra Funda. Todos os direitos reservados.</div>
         <div>Várzea da Barra Funda • Zona Oeste de São Paulo.</div>
@@ -1298,5 +1333,4 @@
   </script>
 </body>
 </html>
-
 
