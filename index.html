@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>COC Barra Funda – A Melhor Escola da Zona Oeste de São Paulo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="COC Barra Funda – a melhor escola da Zona Oeste de São Paulo. Da 1ª série ao Ensino Médio, com sala Google, período integral e o melhor custo-benefício da região da Barra Funda." />
+  <meta name="description" content="COC Barra Funda, na Várzea da Barra Funda – da 1ª série ao Ensino Médio, com sala Google, período integral e o melhor custo-benefício da Zona Oeste de São Paulo." />
   <meta name="keywords" content="melhor escola da zona oeste de São Paulo, melhor escola da Barra Funda, escola particular Barra Funda, ensino fundamental, ensino médio, escola COC, período integral Barra Funda, colégio particular zona oeste" />
   <link rel="canonical" href="https://cocbarrafunda.com.br/" />
 
@@ -15,9 +15,9 @@
   <!-- OPEN GRAPH / SOCIAL -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="COC Barra Funda – Melhor Escola da Zona Oeste de São Paulo" />
-  <meta property="og:description" content="Da 1ª série ao Ensino Médio, com sala Google, período integral e o melhor custo-benefício da Barra Funda." />
+  <meta property="og:description" content="Escola na Várzea da Barra Funda com sala Google, período integral e ensino forte da 1ª série ao Ensino Médio." />
   <meta property="og:url" content="https://cocbarrafunda.com.br/" />
-  <meta property="og:image" content="https://cocbarrafunda.com.br/imagens/logo-coc-barra-funda.png" />
+  <meta property="og:image" content="https://cocbarrafunda.com.br/imagens/fachada-coc-barra-funda.jpg" />
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="imagens/favicon-coc-barra-funda.png" />
@@ -184,9 +184,20 @@
       transform: translateY(-1px);
     }
 
-    /* HERO (INSPIRADO EM COC + FORM NO TOPO) */
+    .btn-light {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+    }
+
+    /* HERO */
     .hero {
-      padding: 48px 0 32px;
+      padding: 42px 0 28px;
       background: linear-gradient(145deg, #ffffff, #e5f7ec);
       border-bottom: 1px solid rgba(15, 23, 42, 0.06);
     }
@@ -194,7 +205,7 @@
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
-      gap: 36px;
+      gap: 30px;
       align-items: flex-start;
     }
 
@@ -207,7 +218,7 @@
       background: rgba(0, 151, 57, 0.06);
       color: var(--green-dark);
       font-size: 12px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-tag span {
@@ -215,9 +226,9 @@
     }
 
     .hero-title {
-      font-size: 32px;
+      font-size: 30px;
       line-height: 1.2;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-title span {
@@ -225,21 +236,21 @@
     }
 
     .hero-subtitle {
-      font-size: 16px;
+      font-size: 15px;
       color: var(--text-muted);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .hero-highlights {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
+      gap: 8px;
+      margin-bottom: 14px;
     }
 
     .hero-pill {
-      font-size: 13px;
-      padding: 6px 12px;
+      font-size: 12px;
+      padding: 6px 10px;
       border-radius: 999px;
       background: var(--white);
       border: 1px solid rgba(15, 23, 42, 0.08);
@@ -250,7 +261,7 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .hero-note {
@@ -261,14 +272,14 @@
     .hero-metrics {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 18px;
+      gap: 16px;
+      margin-top: 14px;
     }
 
     .hero-metric-item span:first-child {
       display: block;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       color: var(--green-dark);
     }
 
@@ -277,11 +288,11 @@
       color: var(--text-muted);
     }
 
-    /* CARD DO FORM (FORMSPREE) */
+    /* HERO FORM CARD */
     .hero-form-card {
       background: #ffffff;
       border-radius: var(--radius-lg);
-      padding: 20px 18px;
+      padding: 18px 16px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(0, 151, 57, 0.25);
       position: relative;
@@ -291,22 +302,22 @@
     .hero-form-card::after {
       content: "";
       position: absolute;
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      border: 18px solid rgba(0, 151, 57, 0.08);
-      right: -60px;
-      top: -80px;
+      border: 16px solid rgba(0, 151, 57, 0.08);
+      right: -50px;
+      top: -70px;
     }
 
     .hero-form-header {
       position: relative;
       z-index: 1;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-form-header h2 {
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 4px;
     }
 
@@ -318,7 +329,7 @@
     .hero-form {
       position: relative;
       z-index: 1;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
     .hero-form label {
@@ -331,10 +342,10 @@
     .hero-form select,
     .hero-form textarea {
       width: 100%;
-      padding: 8px 10px;
+      padding: 8px 9px;
       border-radius: 10px;
       border: 1px solid rgba(148, 163, 184, 0.8);
-      margin-bottom: 8px;
+      margin-bottom: 7px;
       font-size: 12px;
       font-family: inherit;
     }
@@ -346,43 +357,43 @@
 
     .hero-form button {
       width: 100%;
-      margin-top: 4px;
+      margin-top: 2px;
     }
 
     .hero-form-small {
       font-size: 10px;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     /* SECTION BASE */
     section {
-      padding: 40px 0;
+      padding: 34px 0;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 22px;
     }
 
     .section-kicker {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--green-dark);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .section-title {
-      font-size: 24px;
-      margin-bottom: 8px;
+      font-size: 22px;
+      margin-bottom: 6px;
     }
 
     .section-subtitle {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      max-width: 620px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
@@ -390,19 +401,19 @@
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 18px;
     }
 
     .card {
       background: var(--white);
       border-radius: 14px;
-      padding: 18px;
+      padding: 16px;
       border: 1px solid rgba(15, 23, 42, 0.06);
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
     }
 
     .card h3 {
-      font-size: 16px;
+      font-size: 15px;
       margin-bottom: 6px;
     }
 
@@ -423,14 +434,14 @@
     .segmentos-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      margin-top: 10px;
+      gap: 18px;
+      margin-top: 8px;
     }
 
     .segmento-card {
       background: var(--white);
       border-radius: 14px;
-      padding: 18px;
+      padding: 16px;
       border: 1px solid rgba(0, 151, 57, 0.15);
     }
 
@@ -453,15 +464,15 @@
     .estrutura-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 26px;
+      gap: 22px;
       align-items: center;
     }
 
     .estrutura-list {
       list-style: none;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .estrutura-list li {
@@ -486,7 +497,7 @@
       border-radius: 999px;
       background: rgba(0, 151, 57, 0.08);
       color: var(--green-dark);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .estrutura-photo {
@@ -497,28 +508,54 @@
 
     .estrutura-photo-inner {
       border-radius: 12px;
-      background: url("imagens/sala-google.jpg") center/cover no-repeat;
+      background: url("imagens/sala-google-coc-barra-funda.jpg") center/cover no-repeat;
       min-height: 220px;
+    }
+
+    /* GALERIA */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .galeria-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 10px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .galeria-card img {
+      border-radius: 10px;
+      margin-bottom: 6px;
+    }
+
+    .galeria-card span {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
     }
 
     /* DEPOIMENTOS */
     .depo-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .depo-card {
       background: var(--white);
       border-radius: 14px;
-      padding: 16px;
+      padding: 14px;
       border: 1px solid rgba(15, 23, 42, 0.06);
       font-size: 13px;
       color: var(--text-muted);
     }
 
     .depo-nome {
-      margin-top: 10px;
+      margin-top: 8px;
       font-weight: 600;
       color: var(--text-main);
       font-size: 13px;
@@ -529,29 +566,29 @@
       color: var(--text-muted);
     }
 
-    /* CTA MATRÍCULAS (SEM FORM - FORM JÁ ESTÁ NO TOPO) */
+    /* CTA MATRÍCULAS */
     .cta {
       background: #ffffff;
       border-radius: var(--radius-lg);
-      padding: 24px 20px;
+      padding: 20px 18px;
       border: 1px solid rgba(0, 151, 57, 0.2);
       display: grid;
       grid-template-columns: 1.4fr 1fr;
-      gap: 18px;
+      gap: 16px;
       align-items: center;
       box-shadow: var(--shadow-soft);
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .cta h2 {
-      font-size: 20px;
+      font-size: 19px;
       margin-bottom: 6px;
     }
 
     .cta p {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .cta-small {
@@ -563,39 +600,35 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 10px;
-    }
-
-    .btn-light {
-      background: var(--green);
-      color: var(--white);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
-    }
-
-    .btn-light:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+      margin-top: 8px;
     }
 
     .cta-right-box {
       border-left: 1px solid rgba(0, 151, 57, 0.2);
-      padding-left: 18px;
-      font-size: 13px;
+      padding-left: 14px;
+      font-size: 12px;
+      color: var(--text-muted);
     }
 
-    /* CONTATO / LOCALIZAÇÃO */
+    .cta-right-box ul {
+      margin-top: 6px;
+      padding-left: 16px;
+      font-size: 12px;
+    }
+
+    /* CONTATO */
     .contato-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 24px;
+      gap: 22px;
       align-items: flex-start;
     }
 
     .contato-list {
       list-style: none;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .contato-list li {
@@ -606,7 +639,7 @@
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid rgba(15, 23, 42, 0.1);
-      min-height: 230px;
+      min-height: 220px;
     }
 
     .mapa-embed iframe {
@@ -619,8 +652,8 @@
     footer {
       background: #0b1720;
       color: rgba(255, 255, 255, 0.74);
-      padding: 20px 0 16px;
-      margin-top: 40px;
+      padding: 18px 0 14px;
+      margin-top: 32px;
       font-size: 12px;
     }
 
@@ -628,8 +661,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 8px;
+      gap: 14px;
+      margin-bottom: 6px;
     }
 
     .footer-logo {
@@ -704,23 +737,24 @@
 
       .grid-3,
       .depo-grid,
-      .segmentos-grid {
+      .segmentos-grid,
+      .galeria-grid {
         grid-template-columns: 1fr 1fr;
       }
 
       .hero {
-        padding-top: 32px;
+        padding-top: 30px;
       }
 
       .hero-title {
-        font-size: 26px;
+        font-size: 24px;
       }
 
       .cta-right-box {
         border-left: none;
         padding-left: 0;
         border-top: 1px solid rgba(0, 151, 57, 0.2);
-        padding-top: 12px;
+        padding-top: 10px;
       }
     }
 
@@ -730,17 +764,18 @@
       }
 
       .hero-grid {
-        gap: 24px;
+        gap: 22px;
       }
 
       .grid-3,
       .depo-grid,
-      .segmentos-grid {
+      .segmentos-grid,
+      .galeria-grid {
         grid-template-columns: 1fr;
       }
 
       .cta {
-        padding: 18px 14px;
+        padding: 16px 12px;
       }
 
       .cookie-banner-content {
@@ -763,10 +798,10 @@
     "description": "Escola COC Barra Funda, da 1ª série ao Ensino Médio, com sala Google, período integral e o melhor custo-benefício da zona oeste de São Paulo.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Exemplo, 123",
-      "addressLocality": "Barra Funda",
+      "streetAddress": "Rua Inhaúma, 129–133 – Várzea da Barra Funda",
+      "addressLocality": "São Paulo",
       "addressRegion": "SP",
-      "postalCode": "00000-000",
+      "postalCode": "01139-020",
       "addressCountry": "BR"
     },
     "telephone": "+55-11-0000-0000",
@@ -776,11 +811,7 @@
       "latitude": "-23.000000",
       "longitude": "-46.000000"
     },
-    "areaServed": "Zona Oeste de São Paulo",
-    "sameAs": [
-      "https://www.facebook.com/suaescola",
-      "https://www.instagram.com/suaescola"
-    ]
+    "areaServed": "Zona Oeste de São Paulo"
   }
   </script>
 </head>
@@ -802,6 +833,7 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#galeria">Imagens</a>
           <a href="#contato">Contato</a>
         </div>
         <div class="nav-cta">
@@ -812,61 +844,60 @@
     </div>
   </header>
 
-  <!-- HERO COM FORM NO TOPO -->
+  <!-- HERO COM FORM -->
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-grid">
-        <!-- LADO ESQUERDO: TEXTO -->
+        <!-- TEXTO -->
         <div>
           <div class="hero-tag">
             <span>Melhor escola da Zona Oeste</span>
-            <span>Barra Funda – São Paulo</span>
+            <span>Várzea da Barra Funda</span>
           </div>
           <h1 class="hero-title">
             COC Barra Funda: <span>a melhor escola da Zona Oeste de São Paulo</span> com o melhor custo-benefício.
           </h1>
           <p class="hero-subtitle">
-            Da 1ª série ao Ensino Médio, com sala Google, período integral, ensino forte e acolhimento familiar.
-            Localizado na região da Barra Funda, somos referência em resultado, inovação e formação humana.
+            Escola particular na Várzea da Barra Funda, da 1ª série ao Ensino Médio,
+            com sala Google, período integral e ensino forte em um ambiente acolhedor.
           </p>
           <div class="hero-highlights">
-            <div class="hero-pill">Sala Google e tecnologia em sala</div>
-            <div class="hero-pill">Planos de período integral</div>
+            <div class="hero-pill">Sala Google e tecnologia</div>
+            <div class="hero-pill">Período integral</div>
             <div class="hero-pill">Da 1ª série ao Ensino Médio</div>
-            <div class="hero-pill">Melhor custo-benefício da Barra Funda</div>
+            <div class="hero-pill">Melhor custo-benefício da região</div>
           </div>
           <div class="hero-cta">
-            <a href="#form-interesse" class="btn btn-primary">Preencher formulário agora</a>
+            <a href="#form-interesse" class="btn btn-primary">Preencher formulário</a>
             <a href="tel:+551100000000" class="btn btn-outline">Ligar para a secretaria</a>
           </div>
           <p class="hero-note">
-            Matrículas abertas para o ano letivo. Preencha o formulário ao lado para receber todas as informações.
+            Matrículas abertas. Envie seus dados e receba todas as informações sobre planos, valores e vagas.
           </p>
 
           <div class="hero-metrics">
             <div class="hero-metric-item">
               <span>Zona Oeste</span>
-              <span>Referência em ensino na região.</span>
+              <span>Referência em qualidade de ensino.</span>
             </div>
             <div class="hero-metric-item">
               <span>Barra Funda</span>
-              <span>Localização estratégica e segura.</span>
+              <span>Endereço estratégico e fácil acesso.</span>
             </div>
             <div class="hero-metric-item">
               <span>Custo-benefício</span>
-              <span>Qualidade COC com investimento inteligente.</span>
+              <span>Estrutura completa com investimento inteligente.</span>
             </div>
           </div>
         </div>
 
-        <!-- LADO DIREITO: FORM FORMSpree -->
+        <!-- FORM FORMSpree -->
         <aside class="hero-form-card" aria-label="Formulário de interesse" id="form-interesse">
           <div class="hero-form-header">
             <h2>Quero saber mais sobre o COC Barra Funda</h2>
-            <p>Preencha seus dados e nossa equipe entrará em contato para explicar planos, valores e condições.</p>
+            <p>Preencha seus dados para receber contato da escola sobre matrícula, valores e período integral.</p>
           </div>
 
-          <!-- FORM FORMSpree ADAPTADO -->
           <form
             class="hero-form"
             action="https://formspree.io/f/mnnklqed"
@@ -897,8 +928,8 @@
             </label>
             <select id="segmento" name="segmento" required>
               <option value="">Selecione</option>
-              <option value="fundamental1">Ensino Fundamental I (1ª a 5ª série)</option>
-              <option value="fundamental2">Ensino Fundamental II (6ª a 9ª série)</option>
+              <option value="fundamental1">Fundamental I (1ª a 5ª série)</option>
+              <option value="fundamental2">Fundamental II (6ª a 9ª série)</option>
               <option value="medio">Ensino Médio</option>
               <option value="integral">Período Integral</option>
             </select>
@@ -906,12 +937,12 @@
             <label for="mensagem">
               Sua mensagem:
             </label>
-            <textarea id="mensagem" name="message" placeholder="Ex.: Gostaria de agendar uma visita, saber valores e bolsas."></textarea>
+            <textarea id="mensagem" name="message" placeholder="Ex.: Quero agendar visita e saber valores."></textarea>
 
             <button type="submit" class="btn btn-primary">Enviar e receber contato</button>
 
             <div class="hero-form-small">
-              Seus dados serão utilizados apenas para contato da escola. Não compartilhamos suas informações com terceiros.
+              Seus dados serão usados apenas para contato do COC Barra Funda.
             </div>
           </form>
         </aside>
@@ -923,21 +954,20 @@
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Sobre o COC Barra Funda</div>
-          <h2 class="section-title">Escola completa na região da Barra Funda, em São Paulo</h2>
+          <h2 class="section-title">Escola completa na Várzea da Barra Funda</h2>
           <p class="section-subtitle">
-            O COC Barra Funda é uma escola particular da zona oeste de São Paulo que oferece da 1ª série ao Ensino Médio,
-            unindo tradição, tecnologia e formação humana. Nosso compromisso é preparar o aluno para a vida, para o
-            vestibular e para o mundo.
+            O COC Barra Funda une tradição, tecnologia e proximidade com as famílias.
+            Da 1ª série ao Ensino Médio, o foco é resultado acadêmico e formação humana.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="card">
-            <div class="card-tag">Zona Oeste de São Paulo</div>
-            <h3>Melhor escola da região da Barra Funda</h3>
+            <div class="card-tag">Zona Oeste</div>
+            <h3>Melhor escola da região</h3>
             <p>
-              Localizado na Barra Funda, o COC Barra Funda se destaca entre as escolas da zona oeste por unir ensino forte,
-              infraestrutura moderna e uma proposta pedagógica atualizada, focada em resultados e no cuidado com cada aluno.
+              Localizado na Rua Inhaúma, o COC Barra Funda se destaca entre as escolas da zona oeste
+              pela combinação de ensino forte, acompanhamento próximo e ambiente acolhedor.
             </p>
           </article>
 
@@ -945,8 +975,8 @@
             <div class="card-tag">Do Fundamental ao Médio</div>
             <h3>Da 1ª série ao Ensino Médio</h3>
             <p>
-              Atendemos alunos da 1ª série do Ensino Fundamental até o Ensino Médio, com acompanhamento próximo,
-              tutoria pedagógica e trilhas de aprendizagem que respeitam o ritmo de cada estudante.
+              Atendemos alunos do Fundamental I, Fundamental II e Ensino Médio,
+              com trilhas de aprendizagem bem definidas e apoio pedagógico em cada etapa.
             </p>
           </article>
 
@@ -954,8 +984,7 @@
             <div class="card-tag">Custo-benefício</div>
             <h3>Melhor custo-benefício da Barra Funda</h3>
             <p>
-              Oferecemos estrutura completa, sala Google, período integral e material COC com um investimento que cabe
-              no planejamento da família, tornando o COC Barra Funda a melhor opção de custo-benefício da região.
+              Estrutura completa, sala Google e período integral com um investimento acessível para famílias da região.
             </p>
           </article>
         </div>
@@ -967,33 +996,29 @@
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Diferenciais</div>
-          <h2 class="section-title">Por que somos a melhor escola da zona oeste de São Paulo?</h2>
+          <h2 class="section-title">Por que somos referência na Zona Oeste?</h2>
           <p class="section-subtitle">
-            Mais do que um colégio na Barra Funda, o COC Barra Funda é uma escola completa, que integra tecnologia,
-            acompanhamento pedagógico e um ambiente acolhedor.
+            Tecnologia, integral, apoio ao estudo e foco em resultado formam a base do COC Barra Funda.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="card">
-            <h3>Sala Google e tecnologia em sala</h3>
+            <h3>Sala Google e recursos digitais</h3>
             <p>
-              Ambientes equipados com recursos Google for Education, projetores, internet de alta velocidade e atividades
-              digitais que aproximam o aluno da realidade tecnológica do mercado de trabalho.
+              Aulas com Google for Education, conteúdos interativos e atividades que aproximam o aluno do mundo digital.
             </p>
           </article>
           <article class="card">
-            <h3>Planos de período integral</h3>
+            <h3>Período integral</h3>
             <p>
-              Opções de integral com apoio ao estudo, acompanhamento de tarefas, oficinas, esportes e atividades
-              complementares, garantindo segurança e tranquilidade para as famílias durante todo o dia.
+              Rotina completa com estudo assistido, projetos, esportes e atividades complementares, em ambiente seguro.
             </p>
           </article>
           <article class="card">
-            <h3>Ensino forte e resultado</h3>
+            <h3>Ensino forte e preparação</h3>
             <p>
-              Conteúdo COC reconhecido nacionalmente, simulações de vestibular, foco em ENEM e grandes exames,
-              além de desenvolvimento de habilidades socioemocionais desde as séries iniciais.
+              Conteúdo COC, simulados e acompanhamento de desempenho para preparar o aluno para o próximo nível e vestibulares.
             </p>
           </article>
         </div>
@@ -1005,10 +1030,9 @@
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Ensino</div>
-          <h2 class="section-title">Da 1ª série ao Ensino Médio</h2>
+          <h2 class="section-title">Níveis atendidos pelo COC Barra Funda</h2>
           <p class="section-subtitle">
-            Cada fase da vida escolar é acompanhada de forma próxima, com objetivos claros de aprendizagem e
-            construção de valores.
+            Uma jornada contínua do Fundamental I ao Ensino Médio, com objetivos claros em cada fase.
           </p>
         </div>
 
@@ -1017,27 +1041,24 @@
             <h3>Ensino Fundamental I</h3>
             <ul>
               <li>Da 1ª à 5ª série.</li>
-              <li>Alfabetização sólida e prazer pela leitura.</li>
-              <li>Introdução à tecnologia e projetos interdisciplinares.</li>
-              <li>Acompanhamento individualizado e proximidade com a família.</li>
+              <li>Base sólida em leitura, escrita e matemática.</li>
+              <li>Projetos lúdicos e introdução à tecnologia.</li>
             </ul>
           </article>
           <article class="segmento-card">
             <h3>Ensino Fundamental II</h3>
             <ul>
               <li>Da 6ª à 9ª série.</li>
-              <li>Base acadêmica forte para o Ensino Médio.</li>
-              <li>Uso intenso da sala Google e ferramentas digitais.</li>
-              <li>Projetos de pesquisa, ciências e cidadania.</li>
+              <li>Fortalecimento de conteúdo e pensamento crítico.</li>
+              <li>Uso intenso da sala Google e projetos de pesquisa.</li>
             </ul>
           </article>
           <article class="segmento-card">
             <h3>Ensino Médio</h3>
             <ul>
-              <li>Preparação para ENEM e grandes vestibulares.</li>
-              <li>Simulados frequentes e orientação profissional.</li>
-              <li>Conteúdos atualizados e professores experientes.</li>
-              <li>Ambiente focado em resultado, sem perder o cuidado humano.</li>
+              <li>Preparação para ENEM e vestibulares.</li>
+              <li>Simulados frequentes e orientação de carreira.</li>
+              <li>Ambiente focado em resultado e disciplina.</li>
             </ul>
           </article>
         </div>
@@ -1051,30 +1072,56 @@
           <div class="section-kicker">Estrutura</div>
           <h2 class="section-title">Sala Google, ambientes modernos e segurança</h2>
           <p class="section-subtitle">
-            A estrutura do COC Barra Funda foi pensada para oferecer conforto, segurança e um espaço ideal para o aprendizado.
+            A estrutura foi pensada para conforto, aprendizagem e tranquilidade das famílias.
           </p>
         </div>
 
         <div class="estrutura-grid">
           <div>
             <span class="estrutura-badge">Sala Google • Tecnologia</span>
-            <h3>Sala Google: aprendizado conectado com o futuro</h3>
-            <p style="font-size:14px; color:var(--text-muted); margin-top:6px;">
-              A sala Google do COC Barra Funda permite aulas interativas, uso de recursos digitais, atividades colaborativas
-              e contato com ferramentas utilizadas no mundo acadêmico e profissional. Tudo isso dentro de um ambiente seguro
-              e preparado para cada faixa etária.
+            <h3>Sala Google: aprendizado conectado</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">
+              A sala Google do COC Barra Funda traz aulas mais dinâmicas, colaborativas e próximas do cotidiano digital dos alunos.
             </p>
             <ul class="estrutura-list">
               <li>Sala Google equipada com recursos multimídia.</li>
-              <li>Salas de aula amplas, ventiladas e bem iluminadas.</li>
+              <li>Salas amplas, ventiladas e bem iluminadas.</li>
               <li>Áreas de convivência e pátio para recreação.</li>
               <li>Ambientes monitorados e portaria segura.</li>
               <li>Biblioteca e espaços para estudo.</li>
-              <li>Planos de período integral com alimentação (opção contratada à parte).</li>
             </ul>
           </div>
-          <div class="estrutura-photo" aria-label="Foto ilustrativa da sala Google do COC Barra Funda">
+          <div class="estrutura-photo" aria-label="Sala Google do COC Barra Funda">
+            <!-- IMAGEM DE ALUNOS NA SALA GOOGLE -->
             <div class="estrutura-photo-inner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA (ALUNOS + FACHADA) -->
+    <section id="galeria">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Nossa escola</div>
+          <h2 class="section-title">COC Barra Funda em imagens</h2>
+          <p class="section-subtitle">
+            Veja um pouco da fachada da escola e do dia a dia dos alunos.
+          </p>
+        </div>
+
+        <div class="galeria-grid">
+          <div class="galeria-card">
+            <img src="imagens/fachada-coc-barra-funda.jpg" alt="Fachada do COC Barra Funda na Rua Inhaúma" />
+            <span>Fachada do COC Barra Funda – Rua Inhaúma, 129–133</span>
+          </div>
+          <div class="galeria-card">
+            <img src="imagens/alunos-sala-google-coc-barra-funda.jpg" alt="Alunos na sala Google do COC Barra Funda" />
+            <span>Alunos em atividade na sala Google</span>
+          </div>
+          <div class="galeria-card">
+            <img src="imagens/alunos-patio-coc-barra-funda.jpg" alt="Alunos no pátio e área externa do COC Barra Funda" />
+            <span>Convivência e recreação no pátio da escola</span>
           </div>
         </div>
       </div>
@@ -1085,28 +1132,25 @@
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Famílias COC</div>
-          <h2 class="section-title">O que as famílias dizem sobre o COC Barra Funda</h2>
+          <h2 class="section-title">O que os pais dizem</h2>
           <p class="section-subtitle">
-            Pais e responsáveis destacam o equilíbrio entre acolhimento, disciplina e resultados acadêmicos.
+            Depoimentos de famílias que escolheram o COC Barra Funda.
           </p>
         </div>
 
         <div class="depo-grid">
           <article class="depo-card">
-            “Escolhemos o COC Barra Funda depois de pesquisar diversas escolas da zona oeste de São Paulo.
-            O custo-benefício é excelente e sentimos nossos filhos felizes e bem acompanhados.”
+            “Pesquisamos várias escolas da zona oeste e o COC Barra Funda foi o que melhor uniu preço, estrutura e acolhimento.”
             <div class="depo-nome">Mãe de aluno do Fundamental II</div>
-            <div class="depo-info">Moradora da Barra Funda</div>
+            <div class="depo-info">Várzea da Barra Funda</div>
           </article>
           <article class="depo-card">
-            “A sala Google e o uso de tecnologia fizeram muita diferença para o meu filho no Ensino Médio.
-            Ele se sente preparado para o vestibular e para o mercado de trabalho.”
+            “A sala Google e o uso de tecnologia deram um salto no interesse do meu filho pelas aulas.”
             <div class="depo-nome">Pai de aluno do Ensino Médio</div>
             <div class="depo-info">Zona Oeste de São Paulo</div>
           </article>
           <article class="depo-card">
-            “Para nós, o período integral foi fundamental. Sabemos que nosso filho está em uma escola segura,
-            sendo cuidado e aprendendo de verdade durante todo o dia.”
+            “O período integral nos trouxe tranquilidade. Ele estuda, se alimenta e participa de projetos no mesmo lugar.”
             <div class="depo-nome">Responsável de aluno do Fundamental I</div>
             <div class="depo-info">Família COC Barra Funda</div>
           </article>
@@ -1114,15 +1158,15 @@
       </div>
     </section>
 
-    <!-- CTA MATRÍCULAS (APONTANDO PRO FORM DO TOPO) -->
+    <!-- CTA MATRÍCULAS -->
     <section id="matriculas">
       <div class="container">
         <div class="cta">
           <div>
-            <h2>Matrículas abertas – garanta a vaga do seu filho no COC Barra Funda</h2>
+            <h2>Matrículas abertas no COC Barra Funda</h2>
             <p>
-              Clique no botão abaixo para voltar ao formulário ou fale diretamente com a nossa equipe pelo WhatsApp
-              e conheça planos, valores e condições especiais da melhor escola da região da Barra Funda.
+              Clique abaixo para voltar ao formulário ou fale com nossa equipe pelo WhatsApp e saiba tudo sobre
+              planos, valores e período integral.
             </p>
             <div class="cta-buttons">
               <a href="#form-interesse" class="btn btn-light">
@@ -1133,54 +1177,50 @@
               </a>
             </div>
             <div class="cta-small">
-              COC Barra Funda – escola particular com sala Google, período integral e o melhor custo-benefício
-              da zona oeste de São Paulo.
+              COC Barra Funda – escola particular com sala Google, período integral e o melhor custo-benefício da zona oeste de São Paulo.
             </div>
           </div>
           <div class="cta-right-box">
-            <strong>Atendimento personalizado</strong><br>
-            Nossa equipe pedagógica e de secretaria está preparada para explicar todos os detalhes sobre:
-            <ul style="margin-top:6px; padding-left:18px; font-size:12px; color:var(--text-muted);">
-              <li>Planos de período integral.</li>
-              <li>Materiais e sistema COC.</li>
-              <li>Bolsa de estudos e condições especiais.</li>
-              <li>Processo de matrícula e documentos necessários.</li>
+            <strong>O que você pode tirar em uma conversa:</strong>
+            <ul>
+              <li>Valores e condições especiais.</li>
+              <li>Opções de período integral.</li>
+              <li>Processo de matrícula e documentação.</li>
+              <li>Visita guiada à escola na Rua Inhaúma.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTATO / LOCALIZAÇÃO -->
+    <!-- CONTATO -->
     <section id="contato">
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Contato</div>
           <h2 class="section-title">Localização e canais de atendimento</h2>
           <p class="section-subtitle">
-            Estamos na região da Barra Funda, com fácil acesso pela zona oeste de São Paulo.
-            Entre em contato com a nossa secretaria para tirar dúvidas ou agendar uma visita.
+            Estamos na Várzea da Barra Funda, com fácil acesso pela zona oeste de São Paulo.
           </p>
         </div>
 
         <div class="contato-grid">
           <div>
             <ul class="contato-list">
-              <li><strong>Endereço:</strong> Rua Exemplo, 123 – Barra Funda, São Paulo – SP</li>
+              <li><strong>Endereço:</strong> Rua Inhaúma, 129–133 – Várzea da Barra Funda, 01139-020 – São Paulo/SP</li>
               <li><strong>Telefone secretaria:</strong> (11) 0000-0000</li>
               <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
               <li><strong>E-mail:</strong> secretaria@cocbarrafunda.com.br</li>
               <li><strong>Horário de atendimento:</strong> Segunda a sexta, das 7h às 18h.</li>
             </ul>
-            <p style="font-size:13px; color:var(--text-muted); margin-top:10px;">
-              Atendemos famílias de toda a zona oeste de São Paulo, com destaque para os bairros Barra Funda,
-              Perdizes, Pompeia, Lapa e arredores.
+            <p style="font-size:13px; color:var(--text-muted); margin-top:8px;">
+              Atendemos famílias da Barra Funda, Várzea da Barra Funda, Perdizes, Pompeia, Lapa e toda a zona oeste de São Paulo.
             </p>
           </div>
           <div class="mapa-embed" aria-label="Mapa de localização do COC Barra Funda">
             <!-- Substituir pelo iframe real do Google Maps -->
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0000000000005!2d-46.00000000000001!3d-23.000000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x000000000000000%3ACOCBarraFunda!2sBarra%20Funda!5e0!3m2!1spt-BR!2sbr!4v0000000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0000000000005!2d-46.00000000000001!3d-23.000000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x000000000000000%3ACOCBarraFunda!2sRua%20Inha%C3%BAma!5e0!3m2!1spt-BR!2sbr!4v0000000000000"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -1205,12 +1245,13 @@
           <a href="#sobre">Sobre</a>
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
+          <a href="#galeria">Imagens</a>
           <a href="#contato">Contato</a>
         </div>
       </div>
       <div class="footer-bottom">
         <div>© <span id="anoAtual"></span> COC Barra Funda. Todos os direitos reservados.</div>
-        <div>Melhor escola da região da Barra Funda • Melhor custo-benefício da zona oeste de São Paulo.</div>
+        <div>Várzea da Barra Funda • Zona Oeste de São Paulo.</div>
       </div>
     </div>
     <script>
@@ -1223,7 +1264,7 @@
     <div class="cookie-banner-content">
       <div>
         <strong>Usamos cookies para melhorar sua experiência.</strong>
-        Ao continuar navegando, você concorda com a nossa utilização de cookies para análise de acesso e melhoria do site.
+        Ao continuar navegando, você concorda com o uso de cookies para análise e melhoria do site.
       </div>
       <button id="acceptCookies">Aceitar cookies</button>
     </div>
@@ -1257,4 +1298,5 @@
   </script>
 </body>
 </html>
+
 
