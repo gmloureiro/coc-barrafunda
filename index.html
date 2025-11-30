@@ -461,6 +461,12 @@
       margin-bottom: 4px;
     }
 
+    .segmento-card img {
+      border-radius: 10px;
+      margin: 6px 0 8px;
+      max-width: 100%;
+    }
+
     /* ESTRUTURA / SALA GOOGLE */
     .estrutura-grid {
       display: grid;
@@ -517,14 +523,14 @@
 
     .estrutura-photo-inner {
       border-radius: 12px;
-      background: url("materiais-escolares-coc-barra-funda.jpg") center/cover no-repeat;
+      background: url("sala-google-coc-barra-funda.jpg") center/cover no-repeat;
       min-height: 220px;
     }
 
     /* GALERIA */
     .galeria-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 16px;
     }
 
@@ -714,6 +720,19 @@
       border-radius: 999px;
     }
 
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 6px;
+    }
+
+    .footer-social a {
+      text-decoration: underline;
+    }
+
     /* COOKIE BANNER */
     .cookie-banner {
       position: fixed;
@@ -767,7 +786,7 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: transparent; /* usa só o ícone */
+      background: transparent;
     }
 
     .whatsapp-float img {
@@ -1094,6 +1113,8 @@
         <div class="segmentos-grid">
           <article class="segmento-card">
             <h3>Ensino Fundamental I</h3>
+            <img src="card-educacao-infantil-coc-barra-funda.jpg"
+                 alt="Educação Infantil e séries iniciais no COC Barra Funda">
             <ul>
               <li>Da 1ª à 5ª série.</li>
               <li>Base sólida em leitura, escrita e matemática.</li>
@@ -1102,6 +1123,8 @@
           </article>
           <article class="segmento-card">
             <h3>Ensino Fundamental II</h3>
+            <img src="card-fundamental2-coc-barra-funda.jpg"
+                 alt="Aluno do Ensino Fundamental II no COC Barra Funda">
             <ul>
               <li>Da 6ª à 9ª série.</li>
               <li>Fortalecimento de conteúdo e pensamento crítico.</li>
@@ -1111,8 +1134,7 @@
           <article class="segmento-card">
             <h3>Ensino Médio</h3>
             <img src="banner-ensino-medio-coc-barra-funda.jpg"
-                 alt="Banner Ensino Médio COC Barra Funda"
-                 style="border-radius:10px; margin:6px 0 8px; max-width:100%;">
+                 alt="Banner Ensino Médio COC Barra Funda">
             <ul>
               <li>Preparação para ENEM e vestibulares.</li>
               <li>Simulados frequentes e orientação de carreira.</li>
@@ -1159,7 +1181,7 @@
       </div>
     </section>
 
-    <!-- GALERIA (APENAS 3 IMAGENS DAS CRIANÇAS) -->
+    <!-- GALERIA (CRIANÇAS + FACHADA) -->
     <section id="galeria">
       <div class="container">
         <div class="section-header">
@@ -1185,6 +1207,11 @@
             <img src="aluno-arte-coc-barra-funda.jpg"
                  alt="Aluno em atividade de arte no COC Barra Funda" />
             <span>Atividades de arte e criatividade</span>
+          </div>
+          <div class="galeria-card">
+            <img src="fachada-coc-barra-funda.jpg"
+                 alt="Fachada do COC Barra Funda">
+            <span>Fachada do COC Barra Funda na Rua Inhaúma</span>
           </div>
         </div>
       </div>
@@ -1319,9 +1346,15 @@
         <img src="logo-google-small.png" alt="Google" class="footer-partner-logo">
       </div>
 
+      <div class="footer-social">
+        <span>Siga o COC Barra Funda:</span>
+        <a href="https://www.facebook.com/61550980196237/videos/" target="_blank" rel="noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/coc.barrafunda/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+
       <div class="footer-bottom">
         <div>© <span id="anoAtual"></span> COC Barra Funda. Todos os direitos reservados.</div>
-        <div>Várzea da Barra Funda • Zona Oeste de São Paulo.</div>
+        <div>REDE UNICA EDUCACAO S.A. • CNPJ: 33.919.761/0007-96</div>
       </div>
     </div>
     <script>
@@ -1376,3 +1409,4 @@
   </script>
 </body>
 </html>
+
