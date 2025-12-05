@@ -529,7 +529,6 @@
       display: block;
     }
 
-    /* ANTIGO BLOCO FOTO – MANTIDO CASO PRECISE, MAS NÃO USADO
     .estrutura-photo {
       background: linear-gradient(135deg, #009739, #00c76b);
       border-radius: var(--radius-lg);
@@ -541,64 +540,71 @@
       background: url("sala-google-coc-barra-funda.jpg") center/cover no-repeat;
       min-height: 220px;
     }
-    */
 
-    /* 🎠 CARROSSEL GENÉRICO (ESTRUTURA + GALERIA) */
-    .carousel-wrapper {
+    /* CARROSSEL – FOTOS DA ESTRUTURA */
+    .estrutura-carousel-wrapper {
       position: relative;
       overflow: hidden;
-      width: 100%;
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 16px;
-      animation: slide 32s linear infinite;
-    }
-
-    .carousel-wrapper:hover .carousel-track {
-      animation-play-state: paused;
-    }
-
-    .carousel-item {
-      flex: 0 0 260px;
-      max-width: 300px;
+      border-radius: var(--radius-lg);
       background: var(--white);
-      border-radius: 14px;
-      padding: 10px;
       border: 1px solid rgba(15, 23, 42, 0.06);
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      padding: 10px 0 14px;
     }
 
-    .carousel-item img {
-      border-radius: 10px;
+    .estrutura-carousel-track {
+      display: flex;
+      gap: 14px;
+      animation: estruturaScroll 45s linear infinite;
+    }
+
+    .estrutura-carousel-item {
+      flex: 0 0 25%;
+      padding: 0 8px;
+    }
+
+    .estrutura-carousel-item img {
       width: 100%;
-      height: 190px;
+      height: 210px;
       object-fit: cover;
+      border-radius: 12px;
       background: #00973910;
     }
 
-    .carousel-caption {
-      display: block;
-      margin-top: 5px;
+    .estrutura-carousel-caption {
       font-size: 11px;
       color: var(--text-muted);
       text-align: center;
+      margin-top: 4px;
     }
 
-    .carousel-hint {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 6px;
-      text-align: right;
+    .estrutura-carousel-wrapper::before,
+    .estrutura-carousel-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      pointer-events: none;
+      z-index: 2;
     }
 
-    @keyframes slide {
-      0% { transform: translateX(0); }
+    .estrutura-carousel-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, rgba(245,247,250,0.95), rgba(245,247,250,0));
+    }
+
+    .estrutura-carousel-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, rgba(245,247,250,0.95), rgba(245,247,250,0));
+    }
+
+    @keyframes estruturaScroll {
+      0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
-    /* GALERIA – DEIXAMOS GRID DEFINIDO, MAS AGORA USAMOS O CARROSSEL */
+    /* GALERIA GERAL (CRIANÇAS + FACHADA) */
     .galeria-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -900,8 +906,13 @@
 
       .grid-3,
       .depo-grid,
-      .segmentos-grid {
+      .segmentos-grid,
+      .galeria-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .estrutura-carousel-item {
+        flex: 0 0 40%;
       }
 
       .hero {
@@ -918,10 +929,6 @@
         border-top: 1px solid rgba(0, 151, 57, 0.2);
         padding-top: 10px;
       }
-
-      .carousel-item {
-        flex: 0 0 220px;
-      }
     }
 
     @media (max-width: 720px) {
@@ -935,8 +942,13 @@
 
       .grid-3,
       .depo-grid,
-      .segmentos-grid {
+      .segmentos-grid,
+      .galeria-grid {
         grid-template-columns: 1fr;
+      }
+
+      .estrutura-carousel-item {
+        flex: 0 0 80%;
       }
 
       .cta {
@@ -995,6 +1007,7 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#galeria-estrutura">Fotos da escola</a>
           <a href="#galeria">Galeria</a>
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
@@ -1238,7 +1251,7 @@
       </div>
     </section>
 
-    <!-- ESTRUTURA / SALA GOOGLE + CARROSSEL ANIMADO -->
+    <!-- ESTRUTURA / SALA GOOGLE -->
     <section id="estrutura">
       <div class="container">
         <div class="section-header">
@@ -1267,65 +1280,91 @@
               <li>Biblioteca e espaços para estudo.</li>
             </ul>
           </div>
+          <div class="estrutura-photo" aria-label="Sala Google do COC Barra Funda">
+            <div class="estrutura-photo-inner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Carrossel animado da estrutura -->
-          <div>
-            <div class="carousel-wrapper" aria-label="Estrutura do COC Barra Funda">
-              <div class="carousel-track">
-                <!-- Itens base -->
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-01.jpg" alt="Sala Google do COC Barra Funda">
-                  <span class="carousel-caption">Sala Google preparada para aulas interativas</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-02.jpg" alt="Sala de aula ampla no COC Barra Funda">
-                  <span class="carousel-caption">Salas amplas, ventiladas e bem iluminadas</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-03.jpg" alt="Biblioteca e espaço de estudo do COC Barra Funda">
-                  <span class="carousel-caption">Espaços dedicados a leitura e estudo</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-04.jpg" alt="Pátio e área externa do COC Barra Funda">
-                  <span class="carousel-caption">Pátio para recreação e convivência</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-05.jpg" alt="Ambientes internos da escola COC Barra Funda">
-                  <span class="carousel-caption">Ambientes internos organizados e acolhedores</span>
-                </div>
+    <!-- CARROSSEL – FOTOS DA ESTRUTURA -->
+    <section id="galeria-estrutura">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Estrutura da escola</div>
+          <h2 class="section-title">Veja mais dos ambientes do COC Barra Funda</h2>
+          <p class="section-subtitle">
+            Corredores, salas, pátios e áreas internas em um carrossel de fotos que mostra o dia a dia da escola.
+          </p>
+        </div>
 
-                <!-- Repetição para looping suave -->
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-01.jpg" alt="Sala Google do COC Barra Funda">
-                  <span class="carousel-caption">Sala Google preparada para aulas interativas</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-02.jpg" alt="Sala de aula ampla no COC Barra Funda">
-                  <span class="carousel-caption">Salas amplas, ventiladas e bem iluminadas</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-03.jpg" alt="Biblioteca e espaço de estudo do COC Barra Funda">
-                  <span class="carousel-caption">Espaços dedicados a leitura e estudo</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-04.jpg" alt="Pátio e área externa do COC Barra Funda">
-                  <span class="carousel-caption">Pátio para recreação e convivência</span>
-                </div>
-                <div class="carousel-item">
-                  <img src="estrutura-coc-barra-funda-05.jpg" alt="Ambientes internos da escola COC Barra Funda">
-                  <span class="carousel-caption">Ambientes internos organizados e acolhedores</span>
-                </div>
-              </div>
+        <div class="estrutura-carousel-wrapper">
+          <div class="estrutura-carousel-track">
+            <!-- 1ª volta das imagens -->
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-01.jpg" alt="Área interna do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Ambiente interno da escola</div>
             </div>
-            <div class="carousel-hint">
-              As fotos passam automaticamente. Passe o mouse para pausar.
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-02.jpg" alt="Corredor e acesso às salas" />
+              <div class="estrutura-carousel-caption">Corredores e circulação dos alunos</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-03.jpg" alt="Área externa da escola" />
+              <div class="estrutura-carousel-caption">Pátio e área externa</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-04.jpg" alt="Ambiente com brinquedos pedagógicos" />
+              <div class="estrutura-carousel-caption">Espaços para projetos e atividades</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-05.jpg" alt="Decoração temática com personagens" />
+              <div class="estrutura-carousel-caption">Ambiente lúdico para as crianças</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-06.jpg" alt="Sala de aula ampla e iluminada" />
+              <div class="estrutura-carousel-caption">Sala de aula com carteiras individuais</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-07.jpg" alt="Outra sala de aula do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Salas preparadas para diferentes turmas</div>
+            </div>
+
+            <!-- 2ª volta das imagens (duplicadas para loop contínuo) -->
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-01.jpg" alt="Área interna do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Ambiente interno da escola</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-02.jpg" alt="Corredor e acesso às salas" />
+              <div class="estrutura-carousel-caption">Corredores e circulação dos alunos</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-03.jpg" alt="Área externa da escola" />
+              <div class="estrutura-carousel-caption">Pátio e área externa</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-04.jpg" alt="Ambiente com brinquedos pedagógicos" />
+              <div class="estrutura-carousel-caption">Espaços para projetos e atividades</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-05.jpg" alt="Decoração temática com personagens" />
+              <div class="estrutura-carousel-caption">Ambiente lúdico para as crianças</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-06.jpg" alt="Sala de aula ampla e iluminada" />
+              <div class="estrutura-carousel-caption">Sala de aula com carteiras individuais</div>
+            </div>
+            <div class="estrutura-carousel-item">
+              <img src="estrutura-coc-barra-funda-07.jpg" alt="Outra sala de aula do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Salas preparadas para diferentes turmas</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALERIA (AGORA EM CARROSSEL ANIMADO) -->
+    <!-- GALERIA (CRIANÇAS + FACHADA) -->
     <section id="galeria">
       <div class="container">
         <div class="section-header">
@@ -1336,55 +1375,27 @@
           </p>
         </div>
 
-        <div class="carousel-wrapper" aria-label="Galeria de fotos do COC Barra Funda">
-          <div class="carousel-track">
-            <!-- Itens base -->
-            <div class="carousel-item">
-              <img src="aluno-educacao-infantil-coc-barra-funda.png"
-                   alt="Aluno das séries iniciais no COC Barra Funda" />
-              <span class="carousel-caption">Séries iniciais em ambiente acolhedor</span>
-            </div>
-            <div class="carousel-item">
-              <img src="aluna-fundamental-coc-barra-funda.jpg"
-                   alt="Aluna do ensino fundamental no COC Barra Funda" />
-              <span class="carousel-caption">Aluna do Ensino Fundamental em atividade</span>
-            </div>
-            <div class="carousel-item">
-              <img src="aluno-arte-coc-barra-funda.jpg"
-                   alt="Aluno em atividade de arte no COC Barra Funda" />
-              <span class="carousel-caption">Projetos de arte e criatividade</span>
-            </div>
-            <div class="carousel-item">
-              <img src="fachada-coc-barra-funda.jpg"
-                   alt="Fachada do COC Barra Funda">
-              <span class="carousel-caption">Fachada do COC Barra Funda na Rua Inhaúma</span>
-            </div>
-
-            <!-- Repetição para looping suave -->
-            <div class="carousel-item">
-              <img src="aluno-educacao-infantil-coc-barra-funda.png"
-                   alt="Aluno das séries iniciais no COC Barra Funda" />
-              <span class="carousel-caption">Séries iniciais em ambiente acolhedor</span>
-            </div>
-            <div class="carousel-item">
-              <img src="aluna-fundamental-coc-barra-funda.jpg"
-                   alt="Aluna do ensino fundamental no COC Barra Funda" />
-              <span class="carousel-caption">Aluna do Ensino Fundamental em atividade</span>
-            </div>
-            <div class="carousel-item">
-              <img src="aluno-arte-coc-barra-funda.jpg"
-                   alt="Aluno em atividade de arte no COC Barra Funda" />
-              <span class="carousel-caption">Projetos de arte e criatividade</span>
-            </div>
-            <div class="carousel-item">
-              <img src="fachada-coc-barra-funda.jpg"
-                   alt="Fachada do COC Barra Funda">
-              <span class="carousel-caption">Fachada do COC Barra Funda na Rua Inhaúma</span>
-            </div>
+        <div class="galeria-grid">
+          <div class="galeria-card">
+            <img src="aluno-educacao-infantil-coc-barra-funda.png"
+                 alt="Aluno das séries iniciais no COC Barra Funda" />
+            <span>Alunos das séries iniciais no COC Barra Funda</span>
           </div>
-        </div>
-        <div class="carousel-hint">
-          As fotos se movimentam sozinhas em carrossel contínuo.
+          <div class="galeria-card">
+            <img src="aluna-fundamental-coc-barra-funda.jpg"
+                 alt="Aluna do ensino fundamental no COC Barra Funda" />
+            <span>Aluna do Ensino Fundamental em atividade</span>
+          </div>
+          <div class="galeria-card">
+            <img src="aluno-arte-coc-barra-funda.jpg"
+                 alt="Aluno em atividade de arte no COC Barra Funda" />
+            <span>Atividades de arte e criatividade</span>
+          </div>
+          <div class="galeria-card">
+            <img src="fachada-coc-barra-funda.jpg"
+                 alt="Fachada do COC Barra Funda">
+            <span>Fachada do COC Barra Funda na Rua Inhaúma</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1530,6 +1541,7 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#galeria-estrutura">Fotos da escola</a>
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
         </div>
