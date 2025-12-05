@@ -541,7 +541,45 @@
       min-height: 220px;
     }
 
-    /* GALERIA */
+    /* NOVA GALERIA DE ESTRUTURA */
+    .estrutura-fotos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .estrutura-foto-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #00973910;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .estrutura-foto-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+
+    .estrutura-foto-card span {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #ffffff;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+    }
+
+    .estrutura-foto-card:hover img {
+      transform: scale(1.04);
+    }
+
+    /* GALERIA (geral) */
     .galeria-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -844,7 +882,8 @@
       .grid-3,
       .depo-grid,
       .segmentos-grid,
-      .galeria-grid {
+      .galeria-grid,
+      .estrutura-fotos-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -876,7 +915,8 @@
       .grid-3,
       .depo-grid,
       .segmentos-grid,
-      .galeria-grid {
+      .galeria-grid,
+      .estrutura-fotos-grid {
         grid-template-columns: 1fr;
       }
 
@@ -936,6 +976,7 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#galeria-estrutura">Fotos da escola</a>
           <a href="#galeria">Galeria</a>
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
@@ -1215,6 +1256,54 @@
       </div>
     </section>
 
+    <!-- NOVA SESSÃO: FOTOS DA ESTRUTURA -->
+    <section id="galeria-estrutura">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Estrutura da escola</div>
+          <h2 class="section-title">Veja a estrutura do COC Barra Funda em detalhes</h2>
+          <p class="section-subtitle">
+            Pátios, salas, corredores, quadras e espaços que fazem parte do dia a dia dos alunos.
+          </p>
+        </div>
+
+        <div class="estrutura-fotos-grid">
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-01.jpg" alt="Estrutura COC Barra Funda - Ambiente interno 1">
+            <span>Ambiente interno</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-02.jpg" alt="Estrutura COC Barra Funda - Ambiente interno 2">
+            <span>Salas de aula</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-03.jpg" alt="Estrutura COC Barra Funda - Corredores e acesso">
+            <span>Corredores e acesso</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-04.jpg" alt="Estrutura COC Barra Funda - Pátio e convivência">
+            <span>Pátio e convivência</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-05.jpg" alt="Estrutura COC Barra Funda - Estrutura da escola">
+            <span>Estrutura da escola</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-06.jpg" alt="Estrutura COC Barra Funda - Vista da escola">
+            <span>Vista geral</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-07.jpg" alt="Estrutura COC Barra Funda - Detalhes da estrutura">
+            <span>Detalhes da estrutura</span>
+          </div>
+          <div class="estrutura-foto-card">
+            <img src="estrutura-coc-barra-funda-08.jpg" alt="Estrutura COC Barra Funda - Área de circulação">
+            <span>Área de circulação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- GALERIA (CRIANÇAS + FACHADA) -->
     <section id="galeria">
       <div class="container">
@@ -1392,6 +1481,7 @@
           <a href="#diferenciais">Diferenciais</a>
           <a href="#segmentos">Ensino</a>
           <a href="#estrutura">Estrutura</a>
+          <a href="#galeria-estrutura">Fotos da escola</a>
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
         </div>
@@ -1466,4 +1556,3 @@
   </script>
 </body>
 </html>
-
