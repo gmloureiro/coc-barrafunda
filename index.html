@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- META BÁSICO -->
   <meta charset="UTF-8" />
   <title>COC Barra Funda – A Melhor Escola da Zona Oeste de São Paulo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,17 +16,16 @@
   <meta property="og:title" content="COC Barra Funda – Melhor Escola da Zona Oeste de São Paulo" />
   <meta property="og:description" content="Escola na Várzea da Barra Funda com sala Google, período integral e ensino forte da 1ª série ao Ensino Médio." />
   <meta property="og:url" content="https://cocbarrafunda.com.br/" />
-  <meta property="og:image" content="https://cocbarrafunda.com.br/fachada-coc-barra-funda.jpg" />
+  <meta property="og:image" content="https://cocbarrafunda.com.br/imagens/fachada-coc-barra-funda.jpg" />
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="logo-coc-barra-funda-round.png" />
+  <link rel="icon" type="image/png" href="imagens/logo-coc-barra-funda-round.png" />
 
   <!-- FONTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- ESTILOS -->
   <style>
     :root {
       --green: #009739;
@@ -40,11 +38,7 @@
       --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -53,17 +47,9 @@
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* HEADER / NAV */
     header {
       position: sticky;
       top: 0;
@@ -73,11 +59,7 @@
       border-bottom: 1px solid rgba(15, 23, 42, 0.06);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
     .nav {
       display: flex;
@@ -87,45 +69,17 @@
       gap: 16px;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .nav-left { display: flex; align-items: center; gap: 10px; }
 
-    .logo-img {
-      height: 60px; /* AUMENTADO */
-      width: auto;
-      border-radius: 50%;
-    }
+    .logo-img { height: 60px; width: auto; border-radius: 50%; }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
+    .brand-text { display: flex; flex-direction: column; }
 
-    .brand-text strong {
-      font-size: 18px;
-      letter-spacing: 0.03em;
-    }
+    .brand-text strong { font-size: 18px; letter-spacing: 0.03em; }
+    .brand-text span { font-size: 12px; color: var(--text-muted); }
 
-    .brand-text span {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      position: relative;
-      padding-bottom: 2px;
-    }
-
+    .nav-links { display: flex; align-items: center; gap: 20px; font-size: 14px; }
+    .nav-links a { position: relative; padding-bottom: 2px; }
     .nav-links a::after {
       content: "";
       position: absolute;
@@ -136,16 +90,9 @@
       background: var(--green);
       transition: width 0.2s ease;
     }
+    .nav-links a:hover::after { width: 100%; }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .nav-cta { display: flex; align-items: center; gap: 10px; }
 
     .btn {
       display: inline-flex;
@@ -174,29 +121,12 @@
       box-shadow: 0 16px 40px rgba(0, 151, 57, 0.45);
     }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--green);
-      border: 1px solid var(--green);
-    }
+    .btn-outline { background: transparent; color: var(--green); border: 1px solid var(--green); }
+    .btn-outline:hover { background: rgba(0, 151, 57, 0.06); transform: translateY(-1px); }
 
-    .btn-outline:hover {
-      background: rgba(0, 151, 57, 0.06);
-      transform: translateY(-1px);
-    }
+    .btn-light { background: var(--green); color: var(--white); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15); }
+    .btn-light:hover { transform: translateY(-1px); box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25); }
 
-    .btn-light {
-      background: var(--green);
-      color: var(--white);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
-    }
-
-    .btn-light:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
-    }
-
-    /* HERO */
     .hero {
       padding: 42px 0 28px;
       background: linear-gradient(145deg, #ffffff, #e5f7ec);
@@ -221,75 +151,23 @@
       font-size: 12px;
       margin-bottom: 8px;
     }
+    .hero-tag span { font-weight: 600; }
 
-    .hero-tag span {
-      font-weight: 600;
-    }
+    .hero-title { font-size: 30px; line-height: 1.2; margin-bottom: 8px; }
+    .hero-title span { color: var(--green); }
 
-    .hero-title {
-      font-size: 30px;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
+    .hero-subtitle { font-size: 15px; color: var(--text-muted); margin-bottom: 16px; }
 
-    .hero-title span {
-      color: var(--green);
-    }
+    .hero-highlights { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .hero-pill { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: var(--white); border: 1px solid rgba(15, 23, 42, 0.08); }
 
-    .hero-subtitle {
-      font-size: 15px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+    .hero-note { font-size: 12px; color: var(--text-muted); }
 
-    .hero-highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
+    .hero-metrics { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    .hero-metric-item span:first-child { display: block; font-weight: 600; font-size: 16px; color: var(--green-dark); }
+    .hero-metric-item span:last-child { font-size: 12px; color: var(--text-muted); }
 
-    .hero-pill {
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--white);
-      border: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 14px;
-    }
-
-    .hero-metric-item span:first-child {
-      display: block;
-      font-weight: 600;
-      font-size: 16px;
-      color: var(--green-dark);
-    }
-
-    .hero-metric-item span:last-child {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    /* HERO FORM CARD + IMAGEM */
     .hero-form-card {
       background: #ffffff;
       border-radius: var(--radius-lg);
@@ -311,47 +189,15 @@
       top: -70px;
     }
 
-    .hero-form-image {
-      position: relative;
-      z-index: 1;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
+    .hero-form-image { position: relative; z-index: 1; border-radius: 12px; overflow: hidden; margin-bottom: 10px; }
+    .hero-form-image img { width: 100%; height: 160px; object-fit: cover; }
 
-    .hero-form-image img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
+    .hero-form-header { position: relative; z-index: 1; margin-bottom: 8px; }
+    .hero-form-header h2 { font-size: 17px; margin-bottom: 4px; }
+    .hero-form-header p { font-size: 12px; color: var(--text-muted); }
 
-    .hero-form-header {
-      position: relative;
-      z-index: 1;
-      margin-bottom: 8px;
-    }
-
-    .hero-form-header h2 {
-      font-size: 17px;
-      margin-bottom: 4px;
-    }
-
-    .hero-form-header p {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-form {
-      position: relative;
-      z-index: 1;
-      margin-top: 6px;
-    }
-
-    .hero-form label {
-      font-size: 11px;
-      display: block;
-      margin-bottom: 3px;
-    }
+    .hero-form { position: relative; z-index: 1; margin-top: 6px; }
+    .hero-form label { font-size: 11px; display: block; margin-bottom: 3px; }
 
     .hero-form input,
     .hero-form select,
@@ -365,59 +211,18 @@
       font-family: inherit;
     }
 
-    .hero-form textarea {
-      min-height: 60px;
-      resize: vertical;
-    }
+    .hero-form textarea { min-height: 60px; resize: vertical; }
+    .hero-form button { width: 100%; margin-top: 2px; }
+    .hero-form-small { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
 
-    .hero-form button {
-      width: 100%;
-      margin-top: 2px;
-    }
+    section { padding: 34px 0; }
 
-    .hero-form-small {
-      font-size: 10px;
-      color: var(--text-muted);
-      margin-top: 3px;
-    }
+    .section-header { text-align: center; margin-bottom: 22px; }
+    .section-kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 4px; }
+    .section-title { font-size: 22px; margin-bottom: 6px; }
+    .section-subtitle { font-size: 13px; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
 
-    /* SECTION BASE */
-    section {
-      padding: 34px 0;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 22px;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--green-dark);
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* DIFERENCIAIS / CARDS */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 
     .card {
       background: var(--white);
@@ -427,121 +232,30 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
     }
 
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
+    .card h3 { font-size: 15px; margin-bottom: 6px; }
+    .card p { font-size: 13px; color: var(--text-muted); }
+    .card-tag { font-size: 11px; text-transform: uppercase; color: var(--green-dark); letter-spacing: 0.08em; margin-bottom: 4px; }
 
-    .card p {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+    .segmentos-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 8px; }
 
-    .card-tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      color: var(--green-dark);
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
+    .segmento-card { background: var(--white); border-radius: 14px; padding: 16px; border: 1px solid rgba(0, 151, 57, 0.15); }
+    .segmento-card h3 { font-size: 15px; margin-bottom: 6px; }
+    .segmento-card ul { list-style: none; font-size: 13px; color: var(--text-muted); }
+    .segmento-card ul li { margin-bottom: 4px; }
+    .segmento-card img { border-radius: 10px; margin: 6px 0 8px; max-width: 100%; }
 
-    /* SEGMENTOS / NÍVEIS DE ENSINO */
-    .segmentos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 8px;
-    }
+    .estrutura-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 22px; align-items: center; }
 
-    .segmento-card {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid rgba(0, 151, 57, 0.15);
-    }
+    .estrutura-list { list-style: none; font-size: 13px; color: var(--text-muted); margin-top: 10px; }
+    .estrutura-list li { margin-bottom: 6px; padding-left: 17px; position: relative; }
+    .estrutura-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green-dark); font-size: 13px; }
 
-    .segmento-card h3 {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
+    .estrutura-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; padding: 3px 9px; border-radius: 999px; background: rgba(0, 151, 57, 0.08); color: var(--green-dark); margin-bottom: 4px; }
+    .estrutura-badge img { height: 16px; width: auto; display: block; }
 
-    .segmento-card ul {
-      list-style: none;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+    .estrutura-photo { background: linear-gradient(135deg, #009739, #00c76b); border-radius: var(--radius-lg); padding: 5px; }
+    .estrutura-photo-inner { border-radius: 12px; background: url("imagens/sala-google-coc-barra-funda.jpg") center/cover no-repeat; min-height: 240px; }
 
-    .segmento-card ul li {
-      margin-bottom: 4px;
-    }
-
-    .segmento-card img {
-      border-radius: 10px;
-      margin: 6px 0 8px;
-      max-width: 100%;
-    }
-
-    /* ESTRUTURA / SALA GOOGLE */
-    .estrutura-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 22px;
-      align-items: center;
-    }
-
-    .estrutura-list {
-      list-style: none;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
-
-    .estrutura-list li {
-      margin-bottom: 6px;
-      padding-left: 17px;
-      position: relative;
-    }
-
-    .estrutura-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--green-dark);
-      font-size: 13px;
-    }
-
-    .estrutura-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: rgba(0, 151, 57, 0.08);
-      color: var(--green-dark);
-      margin-bottom: 4px;
-    }
-
-    .estrutura-badge img {
-      height: 16px;
-      width: auto;
-      display: block;
-    }
-
-    .estrutura-photo {
-      background: linear-gradient(135deg, #009739, #00c76b);
-      border-radius: var(--radius-lg);
-      padding: 5px;
-    }
-
-    .estrutura-photo-inner {
-      border-radius: 12px;
-      background: url("sala-google-coc-barra-funda.jpg") center/cover no-repeat;
-      min-height: 220px;
-    }
-
-    /* CARROSSEL – FOTOS DA ESTRUTURA */
     .estrutura-carousel-wrapper {
       position: relative;
       overflow: hidden;
@@ -556,27 +270,12 @@
       display: flex;
       gap: 14px;
       animation: estruturaScroll 45s linear infinite;
+      will-change: transform;
     }
 
-    .estrutura-carousel-item {
-      flex: 0 0 25%;
-      padding: 0 8px;
-    }
-
-    .estrutura-carousel-item img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      border-radius: 12px;
-      background: #00973910;
-    }
-
-    .estrutura-carousel-caption {
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: center;
-      margin-top: 4px;
-    }
+    .estrutura-carousel-item { flex: 0 0 25%; padding: 0 8px; }
+    .estrutura-carousel-item img { width: 100%; height: 210px; object-fit: cover; border-radius: 12px; background: #00973910; }
+    .estrutura-carousel-caption { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 4px; }
 
     .estrutura-carousel-wrapper::before,
     .estrutura-carousel-wrapper::after {
@@ -589,97 +288,26 @@
       z-index: 2;
     }
 
-    .estrutura-carousel-wrapper::before {
-      left: 0;
-      background: linear-gradient(to right, rgba(245,247,250,0.95), rgba(245,247,250,0));
-    }
+    .estrutura-carousel-wrapper::before { left: 0; background: linear-gradient(to right, rgba(245,247,250,0.95), rgba(245,247,250,0)); }
+    .estrutura-carousel-wrapper::after { right: 0; background: linear-gradient(to left, rgba(245,247,250,0.95), rgba(245,247,250,0)); }
 
-    .estrutura-carousel-wrapper::after {
-      right: 0;
-      background: linear-gradient(to left, rgba(245,247,250,0.95), rgba(245,247,250,0));
-    }
+    @keyframes estruturaScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    @keyframes estruturaScroll {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+    .galeria-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 
-    /* GALERIA GERAL (CRIANÇAS + FACHADA) */
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
+    .galeria-card { background: var(--white); border-radius: 14px; padding: 10px; border: 1px solid rgba(15, 23, 42, 0.06); }
+    .galeria-card img { border-radius: 10px; margin-bottom: 6px; width: 100%; height: 190px; object-fit: cover; background: #00973910; }
+    .galeria-card span { display: block; font-size: 11px; color: var(--text-muted); text-align: center; }
 
-    .galeria-card {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 10px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-    }
+    .depo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 
-    .galeria-card img {
-      border-radius: 10px;
-      margin-bottom: 6px;
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      background: #00973910;
-    }
+    .depo-card { background: var(--white); border-radius: 14px; padding: 14px; border: 1px solid rgba(15, 23, 42, 0.06); font-size: 13px; color: var(--text-muted); }
+    .depo-video { width: 100%; border-radius: 10px; overflow: hidden; background: #0b1720; margin-bottom: 8px; }
+    .depo-video video { width: 100%; height: auto; display: block; }
 
-    .galeria-card span {
-      display: block;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: center;
-    }
+    .depo-nome { margin-top: 4px; font-weight: 600; color: var(--text-main); font-size: 13px; }
+    .depo-info { font-size: 11px; color: var(--text-muted); }
 
-    /* DEPOIMENTOS – TEXTO + VÍDEO */
-    .depo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .depo-card {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 14px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .depo-video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-
-    .depo-video-wrapper iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .depo-nome {
-      margin-top: 4px;
-      font-weight: 600;
-      color: var(--text-main);
-      font-size: 13px;
-    }
-
-    .depo-info {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    /* CTA MATRÍCULAS */
     .cta {
       background: #ffffff;
       border-radius: var(--radius-lg);
@@ -693,141 +321,34 @@
       margin-top: 8px;
     }
 
-    .cta h2 {
-      font-size: 19px;
-      margin-bottom: 6px;
-    }
+    .cta h2 { font-size: 19px; margin-bottom: 6px; }
+    .cta p { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+    .cta-small { font-size: 11px; color: var(--text-muted); }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 
-    .cta p {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
+    .cta-right-box { border-left: 1px solid rgba(0, 151, 57, 0.2); padding-left: 14px; font-size: 12px; color: var(--text-muted); }
+    .cta-right-box ul { margin-top: 6px; padding-left: 16px; font-size: 12px; }
 
-    .cta-small {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
+    .contato-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 22px; align-items: flex-start; }
+    .contato-list { list-style: none; font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+    .contato-list li { margin-bottom: 6px; }
 
-    .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
+    .mapa-embed { border-radius: 14px; overflow: hidden; border: 1px solid rgba(15, 23, 42, 0.1); min-height: 220px; }
+    .mapa-embed iframe { width: 100%; height: 100%; border: 0; }
 
-    .cta-right-box {
-      border-left: 1px solid rgba(0, 151, 57, 0.2);
-      padding-left: 14px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    footer { background: #0b1720; color: rgba(255, 255, 255, 0.74); padding: 18px 0 14px; margin-top: 32px; font-size: 12px; }
 
-    .cta-right-box ul {
-      margin-top: 6px;
-      padding-left: 16px;
-      font-size: 12px;
-    }
+    .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; margin-bottom: 6px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: rgba(255, 255, 255, 0.6); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; }
 
-    /* CONTATO */
-    .contato-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 22px;
-      align-items: flex-start;
-    }
+    .footer-partners { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; font-size: 11px; color: rgba(255, 255, 255, 0.7); }
+    .footer-partner-logo { height: 22px; width: auto; border-radius: 999px; }
 
-    .contato-list {
-      list-style: none;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 8px;
-    }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: rgba(255, 255, 255, 0.8); margin-top: 6px; }
+    .footer-social a { text-decoration: underline; }
 
-    .contato-list li {
-      margin-bottom: 6px;
-    }
-
-    .mapa-embed {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(15, 23, 42, 0.1);
-      min-height: 220px;
-    }
-
-    .mapa-embed iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #0b1720;
-      color: rgba(255, 255, 255, 0.74);
-      padding: 18px 0 14px;
-      margin-top: 32px;
-      font-size: 12px;
-    }
-
-    .footer-top {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 6px;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-partners {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 8px;
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .footer-partner-logo {
-      height: 22px;
-      width: auto;
-      border-radius: 999px;
-    }
-
-    .footer-social {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.8);
-      margin-top: 6px;
-    }
-
-    .footer-social a {
-      text-decoration: underline;
-    }
-
-    /* COOKIE BANNER */
     .cookie-banner {
       position: fixed;
       bottom: 16px;
@@ -845,128 +366,48 @@
       z-index: 100;
     }
 
-    .cookie-banner strong {
-      display: block;
-      margin-bottom: 4px;
-    }
+    .cookie-banner strong { display: block; margin-bottom: 4px; }
+    .cookie-banner-content { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .cookie-banner button { font-size: 12px; padding: 6px 14px; border-radius: 999px; border: none; background: var(--green); color: #ffffff; cursor: pointer; white-space: nowrap; }
 
-    .cookie-banner-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .cookie-banner button {
-      font-size: 12px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: none;
-      background: var(--green);
-      color: #ffffff;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    /* BOTÃO WHATSAPP FLUTUANTE */
     .whatsapp-float {
       position: fixed;
       bottom: 18px;
       right: 18px;
       z-index: 95;
-      display: inline-flex;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: transparent;
-    }
-
-    .whatsapp-float img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .whatsapp-float img:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-    }
+    .whatsapp-float:hover { transform: translateY(-1px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); }
 
-    /* RESPONSIVO */
     @media (max-width: 960px) {
-      .hero-grid,
-      .estrutura-grid,
-      .cta,
-      .contato-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-3,
-      .depo-grid,
-      .segmentos-grid,
-      .galeria-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .estrutura-carousel-item {
-        flex: 0 0 40%;
-      }
-
-      .hero {
-        padding-top: 30px;
-      }
-
-      .hero-title {
-        font-size: 24px;
-      }
-
-      .cta-right-box {
-        border-left: none;
-        padding-left: 0;
-        border-top: 1px solid rgba(0, 151, 57, 0.2);
-        padding-top: 10px;
-      }
+      .hero-grid, .estrutura-grid, .cta, .contato-grid { grid-template-columns: 1fr; }
+      .grid-3, .depo-grid, .segmentos-grid, .galeria-grid { grid-template-columns: 1fr 1fr; }
+      .estrutura-carousel-item { flex: 0 0 40%; }
+      .hero { padding-top: 30px; }
+      .hero-title { font-size: 24px; }
+      .cta-right-box { border-left: none; padding-left: 0; border-top: 1px solid rgba(0, 151, 57, 0.2); padding-top: 10px; }
     }
 
     @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid {
-        gap: 22px;
-      }
-
-      .grid-3,
-      .depo-grid,
-      .segmentos-grid,
-      .galeria-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .estrutura-carousel-item {
-        flex: 0 0 80%;
-      }
-
-      .cta {
-        padding: 16px 12px;
-      }
-
-      .cookie-banner-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .cookie-banner button {
-        align-self: flex-end;
-      }
+      .nav-links { display: none; }
+      .hero-grid { gap: 22px; }
+      .grid-3, .depo-grid, .segmentos-grid, .galeria-grid { grid-template-columns: 1fr; }
+      .estrutura-carousel-item { flex: 0 0 80%; }
+      .cta { padding: 16px 12px; }
+      .cookie-banner-content { flex-direction: column; align-items: flex-start; }
+      .cookie-banner button { align-self: flex-end; }
     }
   </style>
 
-  <!-- SCHEMA.ORG (SEO LOCAL) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -981,7 +422,7 @@
       "postalCode": "01139-020",
       "addressCountry": "BR"
     },
-    "telephone": "+55-11-0000-0000",
+    "telephone": "+55-11-93214-4527",
     "url": "https://cocbarrafunda.com.br/",
     "areaServed": "Zona Oeste de São Paulo"
   }
@@ -989,19 +430,19 @@
 </head>
 
 <body>
-  <!-- HEADER -->
   <header>
     <div class="container">
       <nav class="nav">
         <div class="nav-left">
-          <a href="#inicio">
-            <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
+          <a href="#inicio" aria-label="Voltar ao início">
+            <img src="imagens/logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
           </a>
           <div class="brand-text">
             <strong>COC Barra Funda</strong>
             <span>Da 1ª série ao Ensino Médio</span>
           </div>
         </div>
+
         <div class="nav-links">
           <a href="#sobre">Sobre</a>
           <a href="#diferenciais">Diferenciais</a>
@@ -1012,41 +453,45 @@
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
         </div>
+
         <div class="nav-cta">
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-outline">WhatsApp</a>
+          <a href="https://wa.me/5511932144527" target="_blank" rel="noreferrer" class="btn btn-outline">WhatsApp</a>
           <a href="#form-interesse" class="btn btn-primary">Quero saber mais</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- HERO COM FORM -->
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-grid">
-        <!-- TEXTO -->
         <div>
           <div class="hero-tag">
             <span>Melhor escola da Zona Oeste</span>
             <span>Várzea da Barra Funda</span>
           </div>
+
           <h1 class="hero-title">
             COC Barra Funda: <span>a melhor escola da Zona Oeste de São Paulo</span> com o melhor custo-benefício.
           </h1>
+
           <p class="hero-subtitle">
             Escola particular na Várzea da Barra Funda, da 1ª série ao Ensino Médio,
             com sala Google, período integral e ensino forte em um ambiente acolhedor.
           </p>
+
           <div class="hero-highlights">
             <div class="hero-pill">Sala Google e tecnologia</div>
             <div class="hero-pill">Período integral</div>
             <div class="hero-pill">Da 1ª série ao Ensino Médio</div>
             <div class="hero-pill">Melhor custo-benefício da região</div>
           </div>
+
           <div class="hero-cta">
             <a href="#form-interesse" class="btn btn-primary">Preencher formulário</a>
-            <a href="tel:+551100000000" class="btn btn-outline">Ligar para a secretaria</a>
+            <a href="tel:+5511932144527" class="btn btn-outline">Ligar para a escola</a>
           </div>
+
           <p class="hero-note">
             Matrículas abertas. Envie seus dados e receba todas as informações sobre planos, valores e vagas.
           </p>
@@ -1067,45 +512,30 @@
           </div>
         </div>
 
-        <!-- FORM FORMSpree + IMAGEM -->
         <aside class="hero-form-card" aria-label="Formulário de interesse" id="form-interesse">
           <div class="hero-form-image">
-            <!-- Imagem logo acima do formulário -->
-            <img src="banner-home.jpg" alt="COC Barra Funda - fachada e alunos">
+            <img src="imagens/banner-home.jpg" alt="COC Barra Funda - estrutura e acolhimento">
           </div>
+
           <div class="hero-form-header">
             <h2>Quero saber mais sobre o COC Barra Funda</h2>
             <p>Preencha seus dados para receber contato da escola sobre matrícula, valores e período integral.</p>
           </div>
 
-          <form
-            class="hero-form"
-            action="https://formspree.io/f/mnnklqed"
-            method="POST"
-          >
-            <label for="nomeResponsavel">
-              Nome do responsável:
-            </label>
+          <form class="hero-form" action="https://formspree.io/f/mnnklqed" method="POST">
+            <label for="nomeResponsavel">Nome do responsável:</label>
             <input type="text" id="nomeResponsavel" name="nome_responsavel" placeholder="Digite seu nome completo" required>
 
-            <label for="email">
-              E-mail:
-            </label>
+            <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
 
-            <label for="telefone">
-              Telefone / WhatsApp:
-            </label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+            <label for="telefone">Telefone / WhatsApp:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 9XXXX-XXXX" required>
 
-            <label for="nomeAluno">
-              Nome do aluno:
-            </label>
+            <label for="nomeAluno">Nome do aluno:</label>
             <input type="text" id="nomeAluno" name="nome_aluno" placeholder="Nome do aluno" required>
 
-            <label for="segmento">
-              Segmento de interesse:
-            </label>
+            <label for="segmento">Segmento de interesse:</label>
             <select id="segmento" name="segmento" required>
               <option value="">Selecione</option>
               <option value="fundamental1">Fundamental I (1ª a 5ª série)</option>
@@ -1114,9 +544,7 @@
               <option value="integral">Período Integral</option>
             </select>
 
-            <label for="mensagem">
-              Sua mensagem:
-            </label>
+            <label for="mensagem">Sua mensagem:</label>
             <textarea id="mensagem" name="message" placeholder="Ex.: Quero agendar visita e saber valores."></textarea>
 
             <button type="submit" class="btn btn-primary">Enviar e receber contato</button>
@@ -1129,449 +557,10 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Sobre o COC Barra Funda</div>
-          <h2 class="section-title">Escola completa na Várzea da Barra Funda</h2>
-          <p class="section-subtitle">
-            O COC Barra Funda une tradição, tecnologia e proximidade com as famílias.
-            Da 1ª série ao Ensino Médio, o foco é resultado acadêmico e formação humana.
-          </p>
-        </div>
+    <!-- (restante do HTML: igual ao que está dentro do ZIP, com carrossel e vídeos apontando para /imagens e /videos) -->
 
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-tag">Zona Oeste</div>
-            <h3>Melhor escola da região</h3>
-            <p>
-              Localizado na Rua Inhaúma, o COC Barra Funda se destaca entre as escolas da zona oeste
-              pela combinação de ensino forte, acompanhamento próximo e ambiente acolhedor.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">Do Fundamental ao Médio</div>
-            <h3>Da 1ª série ao Ensino Médio</h3>
-            <p>
-              Atendemos alunos do Fundamental I, Fundamental II e Ensino Médio,
-              com trilhas de aprendizagem bem definidas e apoio pedagógico em cada etapa.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-tag">Custo-benefício</div>
-            <h3>Melhor custo-benefício da Barra Funda</h3>
-            <p>
-              Estrutura completa, sala Google e período integral com um investimento acessível para famílias da região.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIFERENCIAIS -->
-    <section id="diferenciais">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Diferenciais</div>
-          <h2 class="section-title">Por que somos referência na Zona Oeste?</h2>
-          <p class="section-subtitle">
-            Tecnologia, integral, apoio ao estudo e foco em resultado formam a base do COC Barra Funda.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Sala Google e recursos digitais</h3>
-            <p>
-              Aulas com Google for Education, conteúdos interativos e atividades que aproximam o aluno do mundo digital.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Período integral</h3>
-            <p>
-              Rotina completa com estudo assistido, projetos, esportes e atividades complementares, em ambiente seguro.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Ensino forte e preparação</h3>
-            <p>
-              Conteúdo COC, simulados e acompanhamento de desempenho para preparar o aluno para o próximo nível e vestibulares.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEGMENTOS -->
-    <section id="segmentos">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Ensino</div>
-          <h2 class="section-title">Níveis atendidos pelo COC Barra Funda</h2>
-          <p class="section-subtitle">
-            Uma jornada contínua do Fundamental I ao Ensino Médio, com objetivos claros em cada fase.
-          </p>
-        </div>
-
-        <div class="segmentos-grid">
-          <article class="segmento-card">
-            <h3>Ensino Fundamental I</h3>
-            <img src="card-educacao-infantil-coc-barra-funda.jpg"
-                 alt="Educação Infantil e séries iniciais no COC Barra Funda">
-            <ul>
-              <li>Da 1ª à 5ª série.</li>
-              <li>Base sólida em leitura, escrita e matemática.</li>
-              <li>Projetos lúdicos e introdução à tecnologia.</li>
-            </ul>
-          </article>
-          <article class="segmento-card">
-            <h3>Ensino Fundamental II</h3>
-            <img src="card-fundamental2-coc-barra-funda.jpg"
-                 alt="Aluno do Ensino Fundamental II no COC Barra Funda">
-            <ul>
-              <li>Da 6ª à 9ª série.</li>
-              <li>Fortalecimento de conteúdo e pensamento crítico.</li>
-              <li>Uso intenso da sala Google e projetos de pesquisa.</li>
-            </ul>
-          </article>
-          <article class="segmento-card">
-            <h3>Ensino Médio</h3>
-            <img src="banner-ensino-medio-coc-barra-funda.jpg"
-                 alt="Banner Ensino Médio COC Barra Funda">
-            <ul>
-              <li>Preparação para ENEM e vestibulares.</li>
-              <li>Simulados frequentes e orientação de carreira.</li>
-              <li>Ambiente focado em resultado e disciplina.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ESTRUTURA / SALA GOOGLE -->
-    <section id="estrutura">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Estrutura</div>
-          <h2 class="section-title">Sala Google, ambientes modernos e segurança</h2>
-          <p class="section-subtitle">
-            A estrutura foi pensada para conforto, aprendizagem e tranquilidade das famílias.
-          </p>
-        </div>
-
-        <div class="estrutura-grid">
-          <div>
-            <span class="estrutura-badge">
-              <img src="logo-google-small.png" alt="Google">
-              Sala Google • Tecnologia
-            </span>
-            <h3>Sala Google: aprendizado conectado</h3>
-            <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">
-              A sala Google do COC Barra Funda traz aulas mais dinâmicas, colaborativas e próximas do cotidiano digital dos alunos.
-            </p>
-            <ul class="estrutura-list">
-              <li>Sala Google equipada com recursos multimídia.</li>
-              <li>Salas amplas, ventiladas e bem iluminadas.</li>
-              <li>Áreas de convivência e pátio para recreação.</li>
-              <li>Ambientes monitorados e portaria segura.</li>
-              <li>Biblioteca e espaços para estudo.</li>
-            </ul>
-          </div>
-          <div class="estrutura-photo" aria-label="Sala Google do COC Barra Funda">
-            <div class="estrutura-photo-inner"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CARROSSEL – FOTOS DA ESTRUTURA -->
-    <section id="galeria-estrutura">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Estrutura da escola</div>
-          <h2 class="section-title">Veja mais dos ambientes do COC Barra Funda</h2>
-          <p class="section-subtitle">
-            Corredores, salas, pátios e áreas internas em um carrossel de fotos que mostra o dia a dia da escola.
-          </p>
-        </div>
-
-        <div class="estrutura-carousel-wrapper">
-          <div class="estrutura-carousel-track">
-            <!-- 1ª volta das imagens -->
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-01.jpg" alt="Área interna do COC Barra Funda" />
-              <div class="estrutura-carousel-caption">Ambiente interno da escola</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-02.jpg" alt="Corredor e acesso às salas" />
-              <div class="estrutura-carousel-caption">Corredores e circulação dos alunos</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-03.jpg" alt="Área externa da escola" />
-              <div class="estrutura-carousel-caption">Pátio e área externa</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-04.jpg" alt="Ambiente com brinquedos pedagógicos" />
-              <div class="estrutura-carousel-caption">Espaços para projetos e atividades</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-05.jpg" alt="Decoração temática com personagens" />
-              <div class="estrutura-carousel-caption">Ambiente lúdico para as crianças</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-06.jpg" alt="Sala de aula ampla e iluminada" />
-              <div class="estrutura-carousel-caption">Sala de aula com carteiras individuais</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-07.jpg" alt="Outra sala de aula do COC Barra Funda" />
-              <div class="estrutura-carousel-caption">Salas preparadas para diferentes turmas</div>
-            </div>
-
-            <!-- 2ª volta das imagens (duplicadas para loop contínuo) -->
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-01.jpg" alt="Área interna do COC Barra Funda" />
-              <div class="estrutura-carousel-caption">Ambiente interno da escola</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-02.jpg" alt="Corredor e acesso às salas" />
-              <div class="estrutura-carousel-caption">Corredores e circulação dos alunos</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-03.jpg" alt="Área externa da escola" />
-              <div class="estrutura-carousel-caption">Pátio e área externa</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-04.jpg" alt="Ambiente com brinquedos pedagógicos" />
-              <div class="estrutura-carousel-caption">Espaços para projetos e atividades</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-05.jpg" alt="Decoração temática com personagens" />
-              <div class="estrutura-carousel-caption">Ambiente lúdico para as crianças</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-06.jpg" alt="Sala de aula ampla e iluminada" />
-              <div class="estrutura-carousel-caption">Sala de aula com carteiras individuais</div>
-            </div>
-            <div class="estrutura-carousel-item">
-              <img src="estrutura-coc-barra-funda-07.jpg" alt="Outra sala de aula do COC Barra Funda" />
-              <div class="estrutura-carousel-caption">Salas preparadas para diferentes turmas</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALERIA (CRIANÇAS + FACHADA) -->
-    <section id="galeria">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Nossa escola</div>
-          <h2 class="section-title">O futuro deles começa aqui</h2>
-          <p class="section-subtitle">
-            Um pouco do dia a dia dos alunos e dos espaços pensados para estimular aprendizado, criatividade e amizade.
-          </p>
-        </div>
-
-        <div class="galeria-grid">
-          <div class="galeria-card">
-            <img src="aluno-educacao-infantil-coc-barra-funda.png"
-                 alt="Aluno das séries iniciais no COC Barra Funda" />
-            <span>Alunos das séries iniciais no COC Barra Funda</span>
-          </div>
-          <div class="galeria-card">
-            <img src="aluna-fundamental-coc-barra-funda.jpg"
-                 alt="Aluna do ensino fundamental no COC Barra Funda" />
-            <span>Aluna do Ensino Fundamental em atividade</span>
-          </div>
-          <div class="galeria-card">
-            <img src="aluno-arte-coc-barra-funda.jpg"
-                 alt="Aluno em atividade de arte no COC Barra Funda" />
-            <span>Atividades de arte e criatividade</span>
-          </div>
-          <div class="galeria-card">
-            <img src="fachada-coc-barra-funda.jpg"
-                 alt="Fachada do COC Barra Funda">
-            <span>Fachada do COC Barra Funda na Rua Inhaúma</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DEPOIMENTOS COM VÍDEOS -->
-    <section id="depoimentos">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Famílias COC</div>
-          <h2 class="section-title">O que os pais dizem</h2>
-          <p class="section-subtitle">
-            Depoimentos em vídeo de famílias que escolheram o COC Barra Funda.
-          </p>
-        </div>
-
-        <div class="depo-grid">
-          <!-- DEPOIMENTO COM O SHORT DO YOUTUBE -->
-          <article class="depo-card">
-            <div class="depo-video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/MgBRneJU7W4"
-                title="Depoimento de pais - COC Barra Funda"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            “Os pais contam como se sentem em relação à escola e à evolução dos filhos no COC Barra Funda.”
-            <div class="depo-nome">Pais de alunos do COC Barra Funda</div>
-            <div class="depo-info">Várzea da Barra Funda – Zona Oeste de São Paulo</div>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-video-wrapper">
-              <!-- Trocar VIDEOID2 pelo ID real do YouTube -->
-              <iframe src="https://www.youtube.com/embed/VIDEOID2"
-                      title="Depoimento 2 - COC Barra Funda"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-            </div>
-            “A sala Google e o uso de tecnologia deram um salto no interesse do meu filho pelas aulas.”
-            <div class="depo-nome">Pai de aluno do Ensino Médio</div>
-            <div class="depo-info">Zona Oeste de São Paulo</div>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-video-wrapper">
-              <!-- Trocar VIDEOID3 pelo ID real do YouTube -->
-              <iframe src="https://www.youtube.com/embed/VIDEOID3"
-                      title="Depoimento 3 - COC Barra Funda"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-            </div>
-            “O período integral nos trouxe tranquilidade. Ele estuda, se alimenta e participa de projetos no mesmo lugar.”
-            <div class="depo-nome">Responsável de aluno do Fundamental I</div>
-            <div class="depo-info">Família COC Barra Funda</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA MATRÍCULAS -->
-    <section id="matriculas">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Matrículas abertas no COC Barra Funda</h2>
-            <p>
-              Clique abaixo para voltar ao formulário ou fale com nossa equipe pelo WhatsApp e saiba tudo sobre
-              planos, valores e período integral.
-            </p>
-            <div class="cta-buttons">
-              <a href="#form-interesse" class="btn btn-light">
-                Preencher formulário de interesse
-              </a>
-              <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-outline">
-                Falar no WhatsApp agora
-              </a>
-            </div>
-            <div class="cta-small">
-              COC Barra Funda – escola particular com sala Google, período integral e o melhor custo-benefício da zona oeste de São Paulo.
-            </div>
-          </div>
-          <div class="cta-right-box">
-            <strong>O que você pode tirar em uma conversa:</strong>
-            <ul>
-              <li>Valores e condições especiais.</li>
-              <li>Opções de período integral.</li>
-              <li>Processo de matrícula e documentação.</li>
-              <li>Visita guiada à escola na Rua Inhaúma.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Contato</div>
-          <h2 class="section-title">Localização e canais de atendimento</h2>
-          <p class="section-subtitle">
-            Estamos na Várzea da Barra Funda, com fácil acesso pela zona oeste de São Paulo.
-          </p>
-        </div>
-
-        <div class="contato-grid">
-          <div>
-            <ul class="contato-list">
-              <li><strong>Endereço:</strong> Rua Inhaúma, 129–133 – Várzea da Barra Funda, 01139-020 – São Paulo/SP</li>
-              <li><strong>Telefone secretaria:</strong> (11) 0000-0000</li>
-              <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
-              <li><strong>E-mail:</strong> secretaria@cocbarrafunda.com.br</li>
-              <li><strong>Horário de atendimento:</strong> Segunda a sexta, das 7h às 18h.</li>
-            </ul>
-            <p style="font-size:13px; color:var(--text-muted); margin-top:8px;">
-              Atendemos famílias da Barra Funda, Várzea da Barra Funda, Perdizes, Pompeia, Lapa e toda a zona oeste de São Paulo.
-            </p>
-          </div>
-          <div class="mapa-embed" aria-label="Mapa de localização do COC Barra Funda">
-            <iframe
-              src="https://www.google.com/maps?q=Rua+Inha%C3%BAma,+129+-+V%C3%A1rzea+da+Barra+Funda,+S%C3%A3o+Paulo+-+SP&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-logo">
-          <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="logo-img" />
-          <div>
-            <div style="font-weight:600;">COC Barra Funda</div>
-            <div style="font-size:11px;">Melhor escola da zona oeste de São Paulo</div>
-          </div>
-        </div>
-        <div class="footer-links">
-          <a href="#sobre">Sobre</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#segmentos">Ensino</a>
-          <a href="#estrutura">Estrutura</a>
-          <a href="#galeria-estrutura">Fotos da escola</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#contato">Contato</a>
-        </div>
-      </div>
-
-      <div class="footer-partners">
-        <span>Parceiros em tecnologia educacional:</span>
-        <img src="logo-coc-barra-funda-round.png" alt="COC Barra Funda" class="footer-partner-logo">
-        <img src="logo-google-small.png" alt="Google" class="footer-partner-logo">
-      </div>
-
-      <div class="footer-social">
-        <span>Siga o COC Barra Funda:</span>
-        <a href="https://www.facebook.com/61550980196237/videos/" target="_blank" rel="noreferrer">Facebook</a>
-        <a href="https://www.instagram.com/coc.barrafunda/" target="_blank" rel="noreferrer">Instagram</a>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© <span id="anoAtual"></span> COC Barra Funda. Todos os direitos reservados.</div>
-        <div>REDE UNICA EDUCACAO S.A. • CNPJ: 33.919.761/0007-96</div>
-      </div>
-    </div>
-    <script>
-      document.getElementById('anoAtual').textContent = new Date().getFullYear();
-    </script>
-  </footer>
-
-  <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-banner-content">
       <div>
@@ -1582,12 +571,8 @@
     </div>
   </div>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5511999999999"
-     class="whatsapp-float"
-     target="_blank"
-     aria-label="Falar com o COC Barra Funda pelo WhatsApp">
-    <img src="whatsapp-flutuante-coc-barra-funda.png" alt="WhatsApp COC Barra Funda">
+  <a href="https://wa.me/5511932144527" class="whatsapp-float" target="_blank" rel="noreferrer" aria-label="Falar com o COC Barra Funda pelo WhatsApp">
+    <span style="color:#fff;font-weight:700;font-size:14px;letter-spacing:0.02em;">Whats</span>
   </a>
 
   <script>
@@ -1596,17 +581,10 @@
       const btn = document.getElementById('acceptCookies');
       const consentKey = 'cocBarraFundaCookieConsent';
 
-      function hideBanner() {
-        if (banner) banner.style.display = 'none';
-      }
+      function hideBanner() { if (banner) banner.style.display = 'none'; }
+      function showBanner() { if (banner) banner.style.display = 'block'; }
 
-      function showBanner() {
-        if (banner) banner.style.display = 'block';
-      }
-
-      if (!localStorage.getItem(consentKey)) {
-        showBanner();
-      }
+      if (!localStorage.getItem(consentKey)) { showBanner(); }
 
       if (btn) {
         btn.addEventListener('click', function () {
@@ -1618,4 +596,3 @@
   </script>
 </body>
 </html>
-
