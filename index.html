@@ -576,6 +576,7 @@
       color: var(--text-muted);
       text-align: center;
       margin-top: 4px;
+      display: none; /* REMOVE A DESCRIÇÃO VISÍVEL */
     }
 
     .estrutura-carousel-wrapper::before,
@@ -637,8 +638,9 @@
     /* DEPOIMENTOS – TEXTO + VÍDEO */
     .depo-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* AGORA 2 DEPOIMENTOS SEM “BURACO” */
       gap: 16px;
+      justify-content: center;
     }
 
     .depo-card {
@@ -1096,7 +1098,7 @@
             <label for="telefone">
               Telefone / WhatsApp:
             </label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 93214-4527" required>
 
             <label for="nomeAluno">
               Nome do aluno:
@@ -1239,8 +1241,9 @@
           </article>
           <article class="segmento-card">
             <h3>Ensino Médio</h3>
-            <img src="banner-ensino-medio-coc-barra-funda.jpg"
-                 alt="Banner Ensino Médio COC Barra Funda">
+            <!-- SUBSTITUÍDA POR UMA IMAGEM JÁ EXISTENTE NO SITE (MAIS NÍTIDA) -->
+            <img src="estrutura-coc-barra-funda-06.jpg"
+                 alt="Sala de aula do Ensino Médio no COC Barra Funda">
             <ul>
               <li>Preparação para ENEM e vestibulares.</li>
               <li>Simulados frequentes e orientação de carreira.</li>
@@ -1303,47 +1306,61 @@
             <!-- 1ª volta das imagens -->
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-01.jpg" alt="Área interna do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Ambiente interno da escola</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-02.jpg" alt="Corredor e acesso às salas" />
+              <div class="estrutura-carousel-caption">Corredores e circulação dos alunos</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-03.jpg" alt="Área externa da escola" />
+              <div class="estrutura-carousel-caption">Pátio e área externa</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-04.jpg" alt="Ambiente com brinquedos pedagógicos" />
+              <div class="estrutura-carousel-caption">Espaços para projetos e atividades</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-05.jpg" alt="Decoração temática com personagens" />
+              <div class="estrutura-carousel-caption">Ambiente lúdico para as crianças</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-06.jpg" alt="Sala de aula ampla e iluminada" />
+              <div class="estrutura-carousel-caption">Sala de aula com carteiras individuais</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-07.jpg" alt="Outra sala de aula do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Salas preparadas para diferentes turmas</div>
             </div>
 
             <!-- 2ª volta das imagens (duplicadas para loop contínuo) -->
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-01.jpg" alt="Área interna do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Ambiente interno da escola</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-02.jpg" alt="Corredor e acesso às salas" />
+              <div class="estrutura-carousel-caption">Corredores e circulação dos alunos</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-03.jpg" alt="Área externa da escola" />
+              <div class="estrutura-carousel-caption">Pátio e área externa</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-04.jpg" alt="Ambiente com brinquedos pedagógicos" />
+              <div class="estrutura-carousel-caption">Espaços para projetos e atividades</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-05.jpg" alt="Decoração temática com personagens" />
+              <div class="estrutura-carousel-caption">Ambiente lúdico para as crianças</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-06.jpg" alt="Sala de aula ampla e iluminada" />
+              <div class="estrutura-carousel-caption">Sala de aula com carteiras individuais</div>
             </div>
             <div class="estrutura-carousel-item">
               <img src="estrutura-coc-barra-funda-07.jpg" alt="Outra sala de aula do COC Barra Funda" />
+              <div class="estrutura-carousel-caption">Salas preparadas para diferentes turmas</div>
             </div>
           </div>
         </div>
@@ -1362,20 +1379,21 @@
         </div>
 
         <div class="galeria-grid">
+          <!-- SUBSTITUÍDAS POR IMAGENS JÁ EXISTENTES (MAIS NÍTIDAS) -->
           <div class="galeria-card">
-            <img src="aluno-educacao-infantil-coc-barra-funda.png"
-                 alt="Aluno das séries iniciais no COC Barra Funda" />
-            <span>Alunos das séries iniciais no COC Barra Funda</span>
+            <img src="estrutura-coc-barra-funda-05.jpg"
+                 alt="Ambiente lúdico no COC Barra Funda" />
+            <span>Ambiente lúdico e acolhedor</span>
           </div>
           <div class="galeria-card">
-            <img src="aluna-fundamental-coc-barra-funda.jpg"
-                 alt="Aluna do ensino fundamental no COC Barra Funda" />
-            <span>Aluna do Ensino Fundamental em atividade</span>
+            <img src="estrutura-coc-barra-funda-04.jpg"
+                 alt="Espaço para projetos e atividades no COC Barra Funda" />
+            <span>Projetos e atividades práticas</span>
           </div>
           <div class="galeria-card">
-            <img src="aluno-arte-coc-barra-funda.jpg"
-                 alt="Aluno em atividade de arte no COC Barra Funda" />
-            <span>Atividades de arte e criatividade</span>
+            <img src="estrutura-coc-barra-funda-06.jpg"
+                 alt="Sala de aula no COC Barra Funda" />
+            <span>Sala de aula preparada para o dia a dia</span>
           </div>
           <div class="galeria-card">
             <img src="fachada-coc-barra-funda.jpg"
@@ -1398,7 +1416,7 @@
         </div>
 
         <div class="depo-grid">
-          <!-- DEPOIMENTO COM O SHORT DO YOUTUBE -->
+          <!-- DEPOIMENTO 1 -->
           <article class="depo-card">
             <div class="depo-video-wrapper">
               <iframe
@@ -1413,9 +1431,9 @@
             <div class="depo-info">Várzea da Barra Funda – Zona Oeste de São Paulo</div>
           </article>
 
+          <!-- DEPOIMENTO 2 -->
           <article class="depo-card">
             <div class="depo-video-wrapper">
-              <!-- Trocar VIDEOID2 pelo ID real do YouTube -->
               <iframe src="https://www.youtube.com/embed/VIDEOID2"
                       title="Depoimento 2 - COC Barra Funda"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1535,8 +1553,8 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© <span id="anoAtual"></span> COC Barra Funda. Todos os direitos reservados. • Telefone/WhatsApp: (11) 93214-4527</div>
-        <div>REDE UNICA EDUCACAO S.A. • CNPJ: 33.919.761/0007-96</div>
+        <div>© <span id="anoAtual"></span> COC Barra Funda. Todos os direitos reservados.</div>
+        <div>Telefone/WhatsApp: (11) 93214-4527 • REDE UNICA EDUCACAO S.A. • CNPJ: 33.919.761/0007-96</div>
       </div>
     </div>
     <script>
@@ -1591,4 +1609,3 @@
   </script>
 </body>
 </html>
-
