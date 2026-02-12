@@ -448,7 +448,7 @@
     /* SEGMENTOS / NÍVEIS DE ENSINO */
     .segmentos-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr)); /* AGORA 4 COLUNAS */
       gap: 18px;
       margin-top: 8px;
     }
@@ -479,6 +479,10 @@
       border-radius: 10px;
       margin: 6px 0 8px;
       max-width: 100%;
+      width: 100%;
+      height: 170px;            /* PADRONIZA ALTURA */
+      object-fit: cover;        /* PADRONIZA ENQUADRAMENTO */
+      background: #00973910;
     }
 
     /* ESTRUTURA / SALA GOOGLE */
@@ -1214,41 +1218,52 @@
           <div class="section-kicker">Ensino</div>
           <h2 class="section-title">Níveis atendidos pelo COC Barra Funda</h2>
           <p class="section-subtitle">
-            Uma jornada contínua do Fundamental I ao Ensino Médio, com objetivos claros em cada fase.
+            Uma jornada contínua da Educação Infantil ao Ensino Médio, com objetivos claros em cada fase.
           </p>
         </div>
 
         <div class="segmentos-grid">
           <article class="segmento-card">
-            <h3>Ensino Fundamental I</h3>
+            <h3>Educação Infantil</h3>
             <img src="card-educacao-infantil-coc-barra-funda.jpg"
-                 alt="Educação Infantil e séries iniciais no COC Barra Funda">
+                 alt="Educação Infantil no COC Barra Funda">
             <ul>
-              <li>Ensino Fundamental I – 1º ao 5º ano</li>
-              <li>Base sólida em leitura, escrita e matemática.</li>
-              <li>Projetos lúdicos e introdução à tecnologia.</li>
+              <li><strong>Faixa etária:</strong> 4 e 5 anos.</li>
+              <li>Aprendizagem com afeto, rotina e segurança.</li>
+              <li>Atividades lúdicas que desenvolvem autonomia, linguagem e coordenação.</li>
+            </ul>
+          </article>
+
+          <article class="segmento-card">
+            <h3>Ensino Fundamental I</h3>
+            <img src="estrutura-coc-barra-funda-05.jpg"
+                 alt="Alunos do Ensino Fundamental I no COC Barra Funda">
+            <ul>
+              <li><strong>Da 1ª à 5ª série.</strong></li>
+              <li>Base forte em leitura, escrita, matemática e raciocínio lógico.</li>
+              <li>Projetos, acompanhamento próximo e desenvolvimento socioemocional.</li>
             </ul>
           </article>
 
           <article class="segmento-card">
             <h3>Ensino Fundamental II</h3>
-            <img src="card-fundamental2-coc-barra-funda.jpg?v=2"
+            <img src="card-fundamental2-coc-barra-funda-v2.jpg"
                  alt="Alunos do Ensino Fundamental II no COC Barra Funda">
             <ul>
-              <li>Ensino Fundamental II – 6º ao 9º ano</li>
-              <li>Fortalecimento de conteúdo e pensamento crítico.</li>
-              <li>Uso intenso da sala Google e projetos de pesquisa.</li>
+              <li><strong>Da 6ª à 9ª série.</strong></li>
+              <li>Consolidação de conteúdo e pensamento crítico.</li>
+              <li>Uso intenso da Sala Google e projetos de pesquisa.</li>
             </ul>
           </article>
 
           <article class="segmento-card">
             <h3>Ensino Médio</h3>
-            <img src="card-ensino-medio-coc-barra-funda.jpg?v=2"
+            <img src="card-ensino-medio-coc-barra-funda-v2.jpg"
                  alt="Alunos do Ensino Médio no COC Barra Funda">
             <ul>
-              <li>Preparação para ENEM e vestibulares.</li>
-              <li>Simulados frequentes e orientação de carreira.</li>
-              <li>Ambiente focado em resultado e disciplina.</li>
+              <li>Preparação completa para <strong>ENEM e vestibulares</strong>.</li>
+              <li>Simulados frequentes, estratégia de estudo e orientação de carreira.</li>
+              <li>Foco em resultado, disciplina e acompanhamento de desempenho.</li>
             </ul>
           </article>
         </div>
